@@ -22,6 +22,7 @@
   },
   "homepage": "https://github.com/houfu/ergoform#readme",
   "devDependencies": {
+    "@types/jasmine": "^2.8.9",
     "jasmine-core": "^3.2.1",
     "karma": "^3.0.0",
     "karma-chrome-launcher": "^2.2.0",
