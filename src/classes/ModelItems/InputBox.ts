@@ -3,9 +3,9 @@ import {IsModel} from "@classes/ModelItems/IsModel";
 import {InputTypes} from "@classes/ModelItems/InputTypes";
 import {checkItemType, fillOptions, isItemExpress, parseBoolean} from "@classes/utils";
 
-export const INPUT = 'input';
+export const INPUT_BOX = 'input-box';
 
-export class Input implements Item, IsModel {
+export class InputBox implements Item, IsModel {
     get label(): string {
         return this._label;
     }
@@ -28,7 +28,7 @@ export class Input implements Item, IsModel {
     }
 
     ConvertItem(item: ItemFull | ItemExpress): void {
-        checkItemType(item, INPUT);
+        checkItemType(item, INPUT_BOX);
         if (isItemExpress(item)) {
             this.label = item.value;
         } else {

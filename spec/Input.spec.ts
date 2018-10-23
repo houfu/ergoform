@@ -1,19 +1,19 @@
 import {ItemExpress, ItemFull} from "@classes/Item";
-import {Input, INPUT} from "@classes/ModelItems/Input";
+import {InputBox, INPUT_BOX} from "@classes/ModelItems/InputBox";
 import {InputTypes} from "@classes/ModelItems/InputTypes";
 
-describe('Input -- ', () => {
+describe('InputBox -- ', () => {
     describe('Should convert from an Item correctly. ', function () {
         it('Convert an ItemExpress', function () {
-            const testItem: ItemExpress = {type: INPUT, value: 'Your Name: '};
-            const testInput = new Input();
+            const testItem: ItemExpress = {type: INPUT_BOX, value: 'Your Name: '};
+            const testInput = new InputBox();
             testInput.ConvertItem(testItem);
-            const result = new Input('Your Name: ');
+            const result = new InputBox('Your Name: ');
             expect(testInput).toEqual(result);
         });
         it('Convert an ItemFull.', function () {
             const testItem: ItemFull = {
-                type: INPUT, options: {
+                type: INPUT_BOX, options: {
                     label: 'Your Name: ',
                     control: 'Control 1',
                     required:'yes',
@@ -21,9 +21,9 @@ describe('Input -- ', () => {
                     inputType: '2'
                 }
             };
-            const testInput = new Input();
+            const testInput = new InputBox();
             testInput.ConvertItem(testItem);
-            const result = new Input('Your Name: ');
+            const result = new InputBox('Your Name: ');
             result.inputType = InputTypes.number;
             result.control = 'Control 1';
             result.required = true;
