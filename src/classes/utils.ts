@@ -1,16 +1,17 @@
+import {IsItem} from "@classes/IsItem";
 import {Item, ItemExpress, ItemFull} from "@classes/Item";
 
-export function isItemExpress(item: ItemFull | ItemExpress): item is ItemExpress {
+export function isItemExpress(item: Item): item is ItemExpress {
     return (<ItemExpress>item).value !== undefined;
 }
 
-export function checkItemType(item: ItemFull | ItemExpress, type: string) {
+export function checkItemType(item: Item, type: string) {
     if (item.type !== type) {
         throw new Error(`CheckItemType: Item is not a ${type}, is ${item.type}`);
     }
 }
 
-export function fillOptions(target: Item, source: ItemFull, map?: (key: string, value: string, target: Item) => any) {
+export function fillOptions(target: IsItem, source: ItemFull, map?: (key: string, value: string, target: IsItem) => any) {
     for (let property in source.options) {
         if (!source.options.hasOwnProperty(property)) {
             return;

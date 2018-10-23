@@ -1,11 +1,12 @@
-import {Item, ItemExpress, ItemFull} from "@classes/Item";
+import {IsItem} from "@classes/IsItem";
 import {IsModel} from "@classes/ModelItems/IsModel";
 import {InputTypes} from "@classes/ModelItems/InputTypes";
 import {checkItemType, fillOptions, isItemExpress, parseBoolean} from "@classes/utils";
+import {Item} from "@classes/Item";
 
 export const INPUT_BOX = 'input-box';
 
-export class InputBox implements Item, IsModel {
+export class InputBox implements IsItem, IsModel {
     get label(): string {
         return this._label;
     }
@@ -27,7 +28,7 @@ export class InputBox implements Item, IsModel {
         this.label = label;
     }
 
-    ConvertItem(item: ItemFull | ItemExpress): void {
+    ConvertItem(item: Item): void {
         checkItemType(item, INPUT_BOX);
         if (isItemExpress(item)) {
             this.label = item.value;

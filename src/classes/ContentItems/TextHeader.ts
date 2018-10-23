@@ -1,9 +1,10 @@
-import {Item, ItemExpress, ItemFull} from "@classes/Item";
+import {IsItem} from "@classes/IsItem";
 import {checkItemType, fillOptions, isItemExpress} from "@classes/utils";
+import {Item} from "@classes/Item";
 
 export const TEXT_HEADER = 'text-header';
 
-export class TextHeader implements Item {
+export class TextHeader implements IsItem {
     text: string;
     cssClass: string = '';
     headerLevel: number = 3;
@@ -12,7 +13,7 @@ export class TextHeader implements Item {
         this.text = text;
     }
 
-    ConvertItem(item: ItemFull | ItemExpress): void {
+    ConvertItem(item: Item): void {
         checkItemType(item, TEXT_HEADER);
         if (isItemExpress(item)) {
             this.text = item.value;

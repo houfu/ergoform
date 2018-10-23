@@ -1,5 +1,5 @@
 import {ItemExpress, ItemFull} from "@classes/Item";
-import {InputBox, INPUT_BOX} from "@classes/ModelItems/InputBox";
+import {INPUT_BOX, InputBox} from "@classes/ModelItems/InputBox";
 import {InputTypes} from "@classes/ModelItems/InputTypes";
 
 describe('InputBox -- ', () => {

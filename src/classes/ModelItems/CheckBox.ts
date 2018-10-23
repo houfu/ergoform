@@ -1,10 +1,11 @@
-import {Item, ItemExpress, ItemFull} from "@classes/Item";
+import {IsItem} from "@classes/IsItem";
 import {IsModel} from "@classes/ModelItems/IsModel";
 import {checkItemType, fillOptions, isItemExpress} from "@classes/utils";
+import {Item} from "@classes/Item";
 
 export const CHECK_BOX = 'check-box';
 
-export class CheckBox implements Item, IsModel {
+export class CheckBox implements IsItem, IsModel {
     get label(): string {
         return this._label;
     }
@@ -24,7 +25,7 @@ export class CheckBox implements Item, IsModel {
         this.label = label;
     }
 
-    ConvertItem(item: ItemFull | ItemExpress): void {
+    ConvertItem(item: Item): void {
         checkItemType(item, CHECK_BOX);
         if (isItemExpress(item)) {
             this.label = item.value;

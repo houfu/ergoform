@@ -1,6 +1,4 @@
-export interface Item {
-    ConvertItem(item: ItemFull | ItemExpress): void;
-}
+export type Item = ItemFull | ItemExpress;
 
 export interface ItemFull {
     options: Record<string, string>;
@@ -11,4 +9,3 @@ export interface ItemExpress {
     type: string;
     value: string;
 }
-

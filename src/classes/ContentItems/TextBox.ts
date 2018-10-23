@@ -1,10 +1,11 @@
-import {Item, ItemExpress, ItemFull} from "../Item";
+import {IsItem} from "../IsItem";
 import {checkItemType, fillOptions, isItemExpress} from "../utils";
 import {fillSemantic, IsSemantic, Semantic} from "@classes/ContentItems/Semantic";
+import {Item} from "@classes/Item";
 
 export const TEXT_BOX = 'text-box';
 
-export class TextBox implements Item, IsSemantic {
+export class TextBox implements IsItem, IsSemantic {
     text: string;
     cssClass: string = '';
     sem: Semantic = Semantic.none;
@@ -13,7 +14,7 @@ export class TextBox implements Item, IsSemantic {
         this.text = text;
     }
 
-    ConvertItem(item: ItemFull | ItemExpress) {
+    ConvertItem(item: Item) {
         checkItemType(item, TEXT_BOX);
         if (isItemExpress(item)) {
             this.text = item.value;

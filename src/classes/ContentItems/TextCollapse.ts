@@ -1,10 +1,11 @@
-import {Item, ItemExpress, ItemFull} from "@classes/Item";
+import {IsItem} from "@classes/IsItem";
 import {fillSemantic, IsSemantic, Semantic} from "@classes/ContentItems/Semantic";
 import {checkItemType, fillOptions, isItemExpress} from "@classes/utils";
+import {Item} from "@classes/Item";
 
 export const TEXT_COLLAPSE = 'text-collapse';
 
-export class TextCollapse implements Item, IsSemantic {
+export class TextCollapse implements IsItem, IsSemantic {
     set text(value: string) {
         this.setAutomaticHeader(this._text, value);
         this._text = value;
@@ -18,7 +19,7 @@ export class TextCollapse implements Item, IsSemantic {
         this.text = text;
     }
 
-    ConvertItem(item: ItemFull | ItemExpress): void {
+    ConvertItem(item: Item): void {
         checkItemType(item, TEXT_COLLAPSE);
         if (isItemExpress(item)) {
             this.text = item.value;
