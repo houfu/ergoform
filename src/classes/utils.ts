@@ -43,3 +43,7 @@ export function parseBoolean(value: string): boolean {
             return false;
     }
 }
+
+export function removeQuotes(source: string): string {
+    return source.substring(1, source.length-1);
+}
