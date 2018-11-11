@@ -3,6 +3,7 @@ import {ANTLRInputStream, CommonTokenStream} from "antlr4ts";
 import {SelectBoxExpressLexer} from "@classes/ModelItems/SelectBoxExpress/SelectBoxExpressLexer";
 import {SelectBoxExpressParser} from "@classes/ModelItems/SelectBoxExpress/SelectBoxExpressParser";
 import {removeQuotes} from "@classes/utils";
+import {SelectItem} from "@classes/ModelItems/SelectItems/SelectItem";
 
 export function parseSelectBoxExpress(source: string): SelectBox {
     let inputStream = new ANTLRInputStream(source);
@@ -10,9 +11,21 @@ export function parseSelectBoxExpress(source: string): SelectBox {
     let tokenStream = new CommonTokenStream(lexer);
     let parse = new SelectBoxExpressParser(tokenStream);
     let parseResult = parse.selectBoxExpress();
-    if (parseResult.selectItems()) {
-        return new SelectBox(removeQuotes(parseResult.label().text),
-            removeQuotes(parseResult.selectItems()!.text));
+    const selectItems = parseResult.selectItems();
+    if (selectItems) {
+        let resultItems: SelectItem[] = [];
+        selectItems.item().forEach( item => {
+            let pair = item.pair();
+            if (pair) {
+                resultItems.push(new SelectItem(removeQuotes(pair.value()[0].text), removeQuotes(pair.value()[1].text)))
+            } else {
+                const value = item.value();
+                if (value) {
+                    resultItems.push(new SelectItem(removeQuotes(value.text)))
+                }
+            }
+        });
+        return new SelectBox(removeQuotes(parseResult.label().text), resultItems)
     }
     return new SelectBox(removeQuotes(parseResult.label().text),
         '');

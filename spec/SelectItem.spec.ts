@@ -3,7 +3,7 @@ import {parseSelectItems, SelectItem} from "@classes/ModelItems/SelectItems/Sele
 describe('SelectItem -- ', ()=> {
     describe('SelectItems Parsers should work.', function () {
         it('Blank items are blank.', function () {
-            let testItems1 = parseSelectItems(' ');
+            let testItems1 = parseSelectItems('');
             expect(testItems1).toEqual([]);
         });
         it('Single items should work.', function () {

@@ -27,9 +27,13 @@ export class SelectBox implements IsItem, IsModel {
         this._label = value;
     }
 
-    constructor(label: string, items: string) {
+    constructor(label: string, items: string | SelectItem[] ) {
         this.label = label;
-        this.items = parseSelectItems(items);
+        if (typeof items === "string") {
+            this.items = parseSelectItems(items);
+        } else {
+            this.items = items;
+        }
     }
 
     ConvertItem(item: Item): void {
