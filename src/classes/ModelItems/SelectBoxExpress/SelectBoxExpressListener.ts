@@ -1,4 +1,4 @@
-// Generated from src/grammars/SelectBoxExpress.g4 by ANTLR 4.6-SNAPSHOT
+// Generated from src/classes/ModelItems/SelectBoxExpress/SelectBoxExpress.g4 by ANTLR 4.6-SNAPSHOT
 
 
 import {ParseTreeListener} from 'antlr4ts/tree/ParseTreeListener';

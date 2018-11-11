@@ -10,8 +10,8 @@
     "build:watch": "tsc --watch",
     "lint": "tslint --project \"./tsconfig.json\"",
     "docs": "typedoc --out docs",
-    "antlr4ts-selectitems": "antlr4ts -visitor src/grammars/SelectItems.g4",
-    "antlr4ts-selectboxexpress": "antlr4ts -visitor src/grammars/SelectBoxExpress.g4"
+    "antlr4ts-selectitems": "antlr4ts -visitor src/classes/ModelItems/SelectItems/SelectItems.g4",
+    "antlr4ts-selectboxexpress": "antlr4ts -visitor -lib src/classes/ModelItems/SelectItems/ src/classes/ModelItems/SelectBoxExpress/SelectBoxExpress.g4"
   },
   "repository": {
     "type": "git",
