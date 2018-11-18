@@ -1,16 +1,16 @@
-import {IsItem} from "@classes/IsItem";
+import {checkItemInConstructor, IsItem} from "@classes/IsItem";
 import {checkItemType, fillOptions, isItemExpress} from "@classes/utils";
 import {Item} from "@classes/Item";
 
 export const TEXT_HEADER = 'text-header';
 
 export class TextHeader implements IsItem {
-    text: string;
+    text: string = '';
     cssClass: string = '';
     headerLevel: number = 3;
 
-    constructor(text: string = '') {
-        this.text = text;
+    constructor(item?: Item | string) {
+        checkItemInConstructor(this, item, value => this.text = value)
     }
 
     ConvertItem(item: Item): void {

@@ -1,4 +1,4 @@
-import {IsItem} from "@classes/IsItem";
+import {checkItemInConstructor, IsItem} from "@classes/IsItem";
 import {fillSemantic, IsSemantic, Semantic} from "@classes/ContentItems/Semantic";
 import {checkItemType, fillOptions, isItemExpress} from "@classes/utils";
 import {Item} from "@classes/Item";
@@ -15,8 +15,8 @@ export class TextCollapse implements IsItem, IsSemantic {
     private _text: string = '';
     header: string = '';
 
-    constructor(text: string = '') {
-        this.text = text;
+    constructor(item?: Item | string) {
+        checkItemInConstructor(this, item, text => this.text = text)
     }
 
     ConvertItem(item: Item): void {

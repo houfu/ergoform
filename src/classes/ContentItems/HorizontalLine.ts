@@ -7,6 +7,12 @@ export const HORIZONTAL_LINE = 'horizontal-line';
 export class HorizontalLine implements IsItem {
     cssClass: string = '';
 
+    constructor(item?: Item | string) {
+        if (item && (!(typeof item === "string"))) {
+            this.ConvertItem(item)
+        }
+    }
+
     ConvertItem(item: Item): void {
         checkItemType(item, HORIZONTAL_LINE);
         if (!isItemExpress(item)) {

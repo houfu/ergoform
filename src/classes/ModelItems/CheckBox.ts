@@ -1,4 +1,4 @@
-import {IsItem} from "@classes/IsItem";
+import {checkItemInConstructor, IsItem} from "@classes/IsItem";
 import {IsModel} from "@classes/ModelItems/IsModel";
 import {checkItemType, fillOptions, isItemExpress} from "@classes/utils";
 import {Item} from "@classes/Item";
@@ -21,8 +21,8 @@ export class CheckBox implements IsItem, IsModel {
     help: string = '';
     header: string = '';
 
-    constructor(label: string = '') {
-        this.label = label;
+    constructor(item?: Item | string) {
+        checkItemInConstructor<CheckBox>(this,item, value => this.label = value)
     }
 
     ConvertItem(item: Item): void {

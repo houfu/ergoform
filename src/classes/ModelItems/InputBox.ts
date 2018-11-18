@@ -1,4 +1,4 @@
-import {IsItem} from "@classes/IsItem";
+import {checkItemInConstructor, IsItem} from "@classes/IsItem";
 import {IsModel} from "@classes/ModelItems/IsModel";
 import {InputTypes} from "@classes/ModelItems/InputTypes";
 import {checkItemType, fillOptions, isItemExpress, parseBoolean} from "@classes/utils";
@@ -24,8 +24,8 @@ export class InputBox implements IsItem, IsModel {
     required: boolean = false;
     inputType: InputTypes = InputTypes.text;
 
-    constructor(label: string = '') {
-        this.label = label;
+    constructor(item? : Item | string) {
+        checkItemInConstructor(this, item, label => this.label = label)
     }
 
     ConvertItem(item: Item): void {

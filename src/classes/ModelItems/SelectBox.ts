@@ -1,4 +1,4 @@
-import {IsItem} from "@classes/IsItem";
+import {checkItemInConstructor, IsItem} from "@classes/IsItem";
 import {IsModel} from "@classes/ModelItems/IsModel";
 import {checkItemType, fillOptions, isItemExpress, parseBoolean} from "@classes/utils";
 import {parseSelectItems, SelectItem} from "@classes/ModelItems/SelectItems/SelectItem";
@@ -27,20 +27,14 @@ export class SelectBox implements IsItem, IsModel {
         this._label = value;
     }
 
-    constructor(label: string, items: string | SelectItem[] ) {
-        this.label = label;
-        if (typeof items === "string") {
-            this.items = parseSelectItems(items);
-        } else {
-            this.items = items;
-        }
+    constructor(item?: Item | string) {
+        checkItemInConstructor(this, item, value => parseSelectBoxExpress(this, value))
     }
 
     ConvertItem(item: Item): void {
         checkItemType(item, SELECT_BOX);
         if (isItemExpress(item)) {
-            let newItem = parseSelectBoxExpress(item.value);
-            Object.assign(this, newItem);
+            parseSelectBoxExpress(this, item.value);
         } else {
             fillOptions(this, item, (key, value) => {
                 switch (key) {
