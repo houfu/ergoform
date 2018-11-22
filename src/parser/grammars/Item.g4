@@ -1,12 +1,13 @@
+grammar Item;
 
-/** Taken from "The Definitive ANTLR 4 Reference" by Terence Parr */
+item
+    : itemExpress
+    | itemFull
+    ;
 
-// Derived from http://json.org
-grammar JSON;
-
-json
-   : value
-   ;
+itemFull
+    : itemType COLON obj
+    ;
 
 obj
    : '{' pair (',' pair)* '}'
@@ -14,24 +15,30 @@ obj
    ;
 
 pair
-   : STRING ':' value
+   : key ':' value
    ;
 
-array
-   : '[' value (',' value)* ']'
-   | '[' ']'
-   ;
+key
+    : STRING
+    ;
 
 value
    : STRING
-   | NUMBER
-   | obj
-   | array
-   | 'true'
-   | 'false'
-   | 'null'
    ;
 
+itemExpress
+    : itemType COLON expressValue
+    ;
+
+itemType
+    : STRING
+    ;
+
+expressValue
+    : STRING
+    ;
+
+COLON : ':' ;
 
 STRING
    : '"' (ESC | SAFECODEPOINT)* '"'
@@ -50,7 +57,6 @@ fragment HEX
 fragment SAFECODEPOINT
    : ~ ["\\\u0000-\u001F]
    ;
-
 
 NUMBER
    : '-'? INT ('.' [0-9] +)? EXP?
