@@ -11,8 +11,8 @@ export function parseSelectBoxExpress(target: SelectBox, source: string) {
     let tokenStream = new CommonTokenStream(lexer);
     let parse = new SelectBoxExpressParser(tokenStream);
     let parseResult = parse.selectBoxExpress();
+    target.label = removeQuotes(parseResult.label().text);
     const selectItems = parseResult.selectItems();
-    target.label = parseResult.label().text;
     if (selectItems) {
         let resultItems: SelectItem[] = [];
         selectItems.item().forEach(item => {
