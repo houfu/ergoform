@@ -5,6 +5,13 @@ import {SelectBoxExpressParser} from "@classes/ModelItems/SelectBoxExpress/Selec
 import {removeQuotes} from "@classes/utils";
 import {SelectItem} from "@classes/ModelItems/SelectItems/SelectItem";
 
+/**
+ * Parse a SelectBox express item value. As a label and options are required for a SelectBox, the express value has to contain both information.
+ * A SelectBox express is defined in the following manner: "`label` `;` `array of SelectItem`"
+ * For the definition of an array of SelectItem, see [[parseSelectItems]].
+ * @param {SelectBox} target
+ * @param {string} source
+ */
 export function parseSelectBoxExpress(target: SelectBox, source: string) {
     let inputStream = new ANTLRInputStream(source);
     let lexer = new SelectBoxExpressLexer(inputStream);

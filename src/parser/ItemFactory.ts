@@ -11,8 +11,19 @@ import {INPUT_BOX, InputBox} from "@classes/ModelItems/InputBox";
 import {SELECT_BOX, SelectBox} from "@classes/ModelItems/SelectBox";
 import {removeQuotes} from "@classes/utils";
 
+/**
+ * Type definition for a resolver function.
+ */
 export type resolver = (type: string, item: Item) => IsItem | undefined;
 
+/**
+ * Main function for resolving an Item into its result.
+ * @param {string} type The identifier of the Item
+ * @param {Item} item The ItemExpress or ItemFull to be resolved.
+ * @param {resolver} resolvers An array of custom resolvers.
+ * Note that if the identifier used is the same as the default categories, it is overwritten.
+ * @returns {IsItem | undefined} The result Item. If there is no resolution, returns **undefined**.
+ */
 export function resolveItem(type: string, item: Item, ...resolvers: resolver[]): IsItem | undefined {
     let result;
     result = defaultResolver(type, item);
@@ -25,6 +36,12 @@ export function resolveItem(type: string, item: Item, ...resolvers: resolver[]):
     return result;
 }
 
+/**
+ * Function for resolving default items. See [[resolveItem]]
+ * @param {string} type
+ * @param {Item} item
+ * @returns {IsItem | undefined}
+ */
 function defaultResolver(type: string, item: Item): IsItem | undefined {
     switch (type) {
         case ALERT: return createItemFromType(Alert, item);
@@ -38,10 +55,21 @@ function defaultResolver(type: string, item: Item): IsItem | undefined {
     }
 }
 
+/**
+ * Support function for creating items. The item must follow the [[ItemConstructor]] interface.
+ * @param {ItemConstructor} itemConstructor
+ * @param {Item} item
+ * @returns {IsItem}
+ */
 export function createItemFromType(itemConstructor: ItemConstructor, item?: Item): IsItem {
     return new itemConstructor(item);
 }
 
+/**
+ * Support function to create an ItemExpress from the parser.
+ * @param {ItemExpressContext} source
+ * @returns {ItemExpress}
+ */
 export function createItemExpress(source: ItemExpressContext): ItemExpress {
     return {
         type: removeQuotes(source.itemType().text),
@@ -49,6 +77,11 @@ export function createItemExpress(source: ItemExpressContext): ItemExpress {
     }
 }
 
+/**
+ * Support function to create an ItemFull from the parser.
+ * @param {ItemFullContext} source
+ * @returns {ItemFull}
+ */
 export function createItemFull(source: ItemFullContext): ItemFull {
     let obj: { [key: string]: string } = {};
     const pairs = source.obj().pair();
