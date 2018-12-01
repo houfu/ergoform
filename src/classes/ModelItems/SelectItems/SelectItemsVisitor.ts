@@ -3,7 +3,7 @@
 
 import {ParseTreeVisitor} from 'antlr4ts/tree/ParseTreeVisitor';
 
-import {ItemContext, PairContext, SelectItemsContext, ValueContext} from './SelectItemsParser';
+import {ItemContext, KeyContext, PairContext, SelectItemsContext, ValueContext} from './SelectItemsParser';
 
 
 /**
@@ -41,5 +41,12 @@ export interface SelectItemsVisitor<Result> extends ParseTreeVisitor<Result> {
 	 * @return the visitor result
 	 */
 	visitValue?: (ctx: ValueContext) => Result;
+
+	/**
+	 * Visit a parse tree produced by `SelectItemsParser.key`.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	visitKey?: (ctx: KeyContext) => Result;
 }
 

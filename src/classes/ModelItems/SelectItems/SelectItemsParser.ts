@@ -31,8 +31,9 @@ export class SelectItemsParser extends Parser {
 	public static readonly RULE_item = 1;
 	public static readonly RULE_pair = 2;
 	public static readonly RULE_value = 3;
+	public static readonly RULE_key = 4;
 	public static readonly ruleNames: string[] = [
-		"selectItems", "item", "pair", "value"
+		"selectItems", "item", "pair", "value", "key"
 	];
 
 	private static readonly _LITERAL_NAMES: (string | undefined)[] = [
@@ -62,40 +63,40 @@ export class SelectItemsParser extends Parser {
 		super(input);
 		this._interp = new ParserATNSimulator(SelectItemsParser._ATN, this);
 	}
-    // @ts-ignore
+	// @ts-ignore
     @RuleVersion(0)
 	public selectItems(): SelectItemsContext {
 		let _localctx: SelectItemsContext = new SelectItemsContext(this._ctx, this.state);
 		this.enterRule(_localctx, 0, SelectItemsParser.RULE_selectItems);
 		let _la: number;
 		try {
-			this.state = 22;
+			this.state = 24;
 			this._errHandler.sync(this);
 			switch ( this.interpreter.adaptivePredict(this._input,1,this._ctx) ) {
 			case 1:
 				this.enterOuterAlt(_localctx, 1);
 				{
-				this.state = 8;
+				this.state = 10;
 				this.match(SelectItemsParser.T__0);
-				this.state = 9;
+				this.state = 11;
 				this.item();
-				this.state = 14;
+				this.state = 16;
 				this._errHandler.sync(this);
 				_la = this._input.LA(1);
 				while (_la===SelectItemsParser.T__1) {
 					{
 					{
-					this.state = 10;
+					this.state = 12;
 					this.match(SelectItemsParser.T__1);
-					this.state = 11;
+					this.state = 13;
 					this.item();
 					}
 					}
-					this.state = 16;
+					this.state = 18;
 					this._errHandler.sync(this);
 					_la = this._input.LA(1);
 				}
-				this.state = 17;
+				this.state = 19;
 				this.match(SelectItemsParser.T__2);
 				}
 				break;
@@ -103,9 +104,9 @@ export class SelectItemsParser extends Parser {
 			case 2:
 				this.enterOuterAlt(_localctx, 2);
 				{
-				this.state = 19;
+				this.state = 21;
 				this.match(SelectItemsParser.T__0);
-				this.state = 20;
+				this.state = 22;
 				this.match(SelectItemsParser.T__2);
 				}
 				break;
@@ -113,7 +114,7 @@ export class SelectItemsParser extends Parser {
 			case 3:
 				this.enterOuterAlt(_localctx, 3);
 				{
-				this.state = 21;
+				this.state = 23;
 				this.item();
 				}
 				break;
@@ -139,13 +140,13 @@ export class SelectItemsParser extends Parser {
 		let _localctx: ItemContext = new ItemContext(this._ctx, this.state);
 		this.enterRule(_localctx, 2, SelectItemsParser.RULE_item);
 		try {
-			this.state = 26;
+			this.state = 28;
 			this._errHandler.sync(this);
 			switch ( this.interpreter.adaptivePredict(this._input,2,this._ctx) ) {
 			case 1:
 				this.enterOuterAlt(_localctx, 1);
 				{
-				this.state = 24;
+				this.state = 26;
 				this.value();
 				}
 				break;
@@ -153,7 +154,7 @@ export class SelectItemsParser extends Parser {
 			case 2:
 				this.enterOuterAlt(_localctx, 2);
 				{
-				this.state = 25;
+				this.state = 27;
 				this.pair();
 				}
 				break;
@@ -181,11 +182,11 @@ export class SelectItemsParser extends Parser {
 		try {
 			this.enterOuterAlt(_localctx, 1);
 			{
-			this.state = 28;
-			this.value();
-			this.state = 29;
-			this.match(SelectItemsParser.T__3);
 			this.state = 30;
+			this.key();
+			this.state = 31;
+			this.match(SelectItemsParser.T__3);
+			this.state = 32;
 			this.value();
 			}
 		}
@@ -211,7 +212,33 @@ export class SelectItemsParser extends Parser {
 		try {
 			this.enterOuterAlt(_localctx, 1);
 			{
-			this.state = 32;
+			this.state = 34;
+			this.match(SelectItemsParser.STRING);
+			}
+		}
+		catch (re) {
+			if (re instanceof RecognitionException) {
+				_localctx.exception = re;
+				this._errHandler.reportError(this, re);
+				this._errHandler.recover(this, re);
+			} else {
+				throw re;
+			}
+		}
+		finally {
+			this.exitRule();
+		}
+		return _localctx;
+	}
+	// @ts-ignore
+    @RuleVersion(0)
+	public key(): KeyContext {
+		let _localctx: KeyContext = new KeyContext(this._ctx, this.state);
+		this.enterRule(_localctx, 8, SelectItemsParser.RULE_key);
+		try {
+			this.enterOuterAlt(_localctx, 1);
+			{
+			this.state = 36;
 			this.match(SelectItemsParser.STRING);
 			}
 		}
@@ -231,23 +258,24 @@ export class SelectItemsParser extends Parser {
 	}
 
 	public static readonly _serializedATN: string =
-		"\x03\uAF6F\u8320\u479D\uB75C\u4880\u1605\u191C\uAB37\x03\b%\x04\x02\t"+
-		"\x02\x04\x03\t\x03\x04\x04\t\x04\x04\x05\t\x05\x03\x02\x03\x02\x03\x02"+
-		"\x03\x02\x07\x02\x0F\n\x02\f\x02\x0E\x02\x12\v\x02\x03\x02\x03\x02\x03"+
-		"\x02\x03\x02\x03\x02\x05\x02\x19\n\x02\x03\x03\x03\x03\x05\x03\x1D\n\x03"+
-		"\x03\x04\x03\x04\x03\x04\x03\x04\x03\x05\x03\x05\x03\x05\x02\x02\x02\x06"+
-		"\x02\x02\x04\x02\x06\x02\b\x02\x02\x02$\x02\x18\x03\x02\x02\x02\x04\x1C"+
-		"\x03\x02\x02\x02\x06\x1E\x03\x02\x02\x02\b\"\x03\x02\x02\x02\n\v\x07\x03"+
-		"\x02\x02\v\x10\x05\x04\x03\x02\f\r\x07\x04\x02\x02\r\x0F\x05\x04\x03\x02"+
-		"\x0E\f\x03\x02\x02\x02\x0F\x12\x03\x02\x02\x02\x10\x0E\x03\x02\x02\x02"+
-		"\x10\x11\x03\x02\x02\x02\x11\x13\x03\x02\x02\x02\x12\x10\x03\x02\x02\x02"+
-		"\x13\x14\x07\x05\x02\x02\x14\x19\x03\x02\x02\x02\x15\x16\x07\x03\x02\x02"+
-		"\x16\x19\x07\x05\x02\x02\x17\x19\x05\x04\x03\x02\x18\n\x03\x02\x02\x02"+
-		"\x18\x15\x03\x02\x02\x02\x18\x17\x03\x02\x02\x02\x19\x03\x03\x02\x02\x02"+
-		"\x1A\x1D\x05\b\x05\x02\x1B\x1D\x05\x06\x04\x02\x1C\x1A\x03\x02\x02\x02"+
-		"\x1C\x1B\x03\x02\x02\x02\x1D\x05\x03\x02\x02\x02\x1E\x1F\x05\b\x05\x02"+
-		"\x1F \x07\x06\x02\x02 !\x05\b\x05\x02!\x07\x03\x02\x02\x02\"#\x07\x07"+
-		"\x02\x02#\t\x03\x02\x02\x02\x05\x10\x18\x1C";
+		"\x03\uAF6F\u8320\u479D\uB75C\u4880\u1605\u191C\uAB37\x03\b)\x04\x02\t"+
+		"\x02\x04\x03\t\x03\x04\x04\t\x04\x04\x05\t\x05\x04\x06\t\x06\x03\x02\x03"+
+		"\x02\x03\x02\x03\x02\x07\x02\x11\n\x02\f\x02\x0E\x02\x14\v\x02\x03\x02"+
+		"\x03\x02\x03\x02\x03\x02\x03\x02\x05\x02\x1B\n\x02\x03\x03\x03\x03\x05"+
+		"\x03\x1F\n\x03\x03\x04\x03\x04\x03\x04\x03\x04\x03\x05\x03\x05\x03\x06"+
+		"\x03\x06\x03\x06\x02\x02\x02\x07\x02\x02\x04\x02\x06\x02\b\x02\n\x02\x02"+
+		"\x02\'\x02\x1A\x03\x02\x02\x02\x04\x1E\x03\x02\x02\x02\x06 \x03\x02\x02"+
+		"\x02\b$\x03\x02\x02\x02\n&\x03\x02\x02\x02\f\r\x07\x03\x02\x02\r\x12\x05"+
+		"\x04\x03\x02\x0E\x0F\x07\x04\x02\x02\x0F\x11\x05\x04\x03\x02\x10\x0E\x03"+
+		"\x02\x02\x02\x11\x14\x03\x02\x02\x02\x12\x10\x03\x02\x02\x02\x12\x13\x03"+
+		"\x02\x02\x02\x13\x15\x03\x02\x02\x02\x14\x12\x03\x02\x02\x02\x15\x16\x07"+
+		"\x05\x02\x02\x16\x1B\x03\x02\x02\x02\x17\x18\x07\x03\x02\x02\x18\x1B\x07"+
+		"\x05\x02\x02\x19\x1B\x05\x04\x03\x02\x1A\f\x03\x02\x02\x02\x1A\x17\x03"+
+		"\x02\x02\x02\x1A\x19\x03\x02\x02\x02\x1B\x03\x03\x02\x02\x02\x1C\x1F\x05"+
+		"\b\x05\x02\x1D\x1F\x05\x06\x04\x02\x1E\x1C\x03\x02\x02\x02\x1E\x1D\x03"+
+		"\x02\x02\x02\x1F\x05\x03\x02\x02\x02 !\x05\n\x06\x02!\"\x07\x06\x02\x02"+
+		"\"#\x05\b\x05\x02#\x07\x03\x02\x02\x02$%\x07\x07\x02\x02%\t\x03\x02\x02"+
+		"\x02&\'\x07\x07\x02\x02\'\v\x03\x02\x02\x02\x05\x12\x1A\x1E";
 	public static __ATN: ATN;
 	public static get _ATN(): ATN {
 		if (!SelectItemsParser.__ATN) {
@@ -321,14 +349,11 @@ export class ItemContext extends ParserRuleContext {
 
 
 export class PairContext extends ParserRuleContext {
-	public value(): ValueContext[];
-	public value(i: number): ValueContext;
-	public value(i?: number): ValueContext | ValueContext[] {
-		if (i === undefined) {
-			return this.getRuleContexts(ValueContext);
-		} else {
-			return this.getRuleContext(i, ValueContext);
-		}
+	public key(): KeyContext {
+		return this.getRuleContext(0, KeyContext);
+	}
+	public value(): ValueContext {
+		return this.getRuleContext(0, ValueContext);
 	}
 	constructor(parent: ParserRuleContext, invokingState: number);
 	constructor(parent: ParserRuleContext, invokingState: number) {
@@ -371,6 +396,30 @@ export class ValueContext extends ParserRuleContext {
 	@Override
 	public accept<Result>(visitor: SelectItemsVisitor<Result>): Result {
 		if (visitor.visitValue) return visitor.visitValue(this);
+		else return visitor.visitChildren(this);
+	}
+}
+
+
+export class KeyContext extends ParserRuleContext {
+	public STRING(): TerminalNode { return this.getToken(SelectItemsParser.STRING, 0); }
+	constructor(parent: ParserRuleContext, invokingState: number);
+	constructor(parent: ParserRuleContext, invokingState: number) {
+		super(parent, invokingState);
+
+	}
+	@Override public get ruleIndex(): number { return SelectItemsParser.RULE_key; }
+	@Override
+	public enterRule(listener: SelectItemsListener): void {
+		if (listener.enterKey) listener.enterKey(this);
+	}
+	@Override
+	public exitRule(listener: SelectItemsListener): void {
+		if (listener.exitKey) listener.exitKey(this);
+	}
+	@Override
+	public accept<Result>(visitor: SelectItemsVisitor<Result>): Result {
+		if (visitor.visitKey) return visitor.visitKey(this);
 		else return visitor.visitChildren(this);
 	}
 }

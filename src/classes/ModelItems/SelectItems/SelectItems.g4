@@ -11,13 +11,15 @@ item
     |   pair
     ;
 
-/* TODO: pair should be key and value to match class definition. */
-
 pair
-    :   value ':' value
+    :   key ':' value
     ;
 
 value
+    :   STRING
+    ;
+
+key
     :   STRING
     ;
 

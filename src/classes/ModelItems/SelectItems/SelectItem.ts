@@ -43,7 +43,7 @@ export function parseSelectItems(items: string): SelectItem[]  {
         for (let item of parseItems) {
             let pair = item.pair();
             if (pair) {
-                result.push(new SelectItem(removeQuotes(pair.value()[0].text), removeQuotes(pair.value()[1].text)))
+                result.push(new SelectItem(removeQuotes(pair.key().text), removeQuotes(pair.value().text)))
             } else {
                 let value = item.value();
                 if (value) {

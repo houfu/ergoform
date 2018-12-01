@@ -3,7 +3,7 @@
 
 import {ParseTreeListener} from 'antlr4ts/tree/ParseTreeListener';
 
-import {ItemContext, PairContext, SelectItemsContext, ValueContext} from './SelectItemsParser';
+import {ItemContext, KeyContext, PairContext, SelectItemsContext, ValueContext} from './SelectItemsParser';
 
 
 /**
@@ -54,5 +54,16 @@ export interface SelectItemsListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	exitValue?: (ctx: ValueContext) => void;
+
+	/**
+	 * Enter a parse tree produced by `SelectItemsParser.key`.
+	 * @param ctx the parse tree
+	 */
+	enterKey?: (ctx: KeyContext) => void;
+	/**
+	 * Exit a parse tree produced by `SelectItemsParser.key`.
+	 * @param ctx the parse tree
+	 */
+	exitKey?: (ctx: KeyContext) => void;
 }
 
