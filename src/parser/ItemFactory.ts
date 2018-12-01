@@ -10,6 +10,7 @@ import {CHECK_BOX, CheckBox} from "@classes/ModelItems/CheckBox";
 import {INPUT_BOX, InputBox} from "@classes/ModelItems/InputBox";
 import {SELECT_BOX, SelectBox} from "@classes/ModelItems/SelectBox";
 import {removeQuotes} from "@classes/utils";
+import {Options, OPTIONS} from "@classes/MetaItems/Options";
 
 /**
  * Type definition for a resolver function.
@@ -52,6 +53,7 @@ function defaultResolver(type: string, item: Item): IsItem | undefined {
         case CHECK_BOX: return  createItemFromType(CheckBox, item);
         case INPUT_BOX: return createItemFromType(InputBox, item);
         case SELECT_BOX: return createItemFromType(SelectBox, item);
+        case OPTIONS: return createItemFromType(Options, item);
     }
 }
 
