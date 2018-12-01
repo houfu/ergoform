@@ -13,7 +13,8 @@
     "docs": "typedoc --out docs --target ES5 --ignoreCompilerErrors --exclude spec/*",
     "antlr4ts-selectitems": "antlr4ts -visitor src/classes/ModelItems/SelectItems/SelectItems.g4",
     "antlr4ts-selectboxexpress": "antlr4ts -visitor -lib src/classes/ModelItems/SelectItems/ src/classes/ModelItems/SelectBoxExpress/SelectBoxExpress.g4",
-    "antlr4ts-ergoform": "antlr4ts -visitor -lib src/parser/grammars src/parser/grammars/ErgoForm.g4"
+    "antlr4ts-ergoform": "antlr4ts -visitor -lib src/parser/grammars src/parser/grammars/ErgoForm.g4",
+    "prepare": "npm run docs && npm run build"
   },
   "repository": {
     "type": "git",
