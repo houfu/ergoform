@@ -112,6 +112,7 @@
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-external"><a href="_src_classes_modelitems_selectitems_selectitemsvisitor_.selectitemsvisitor.html#visititem" class="tsd-kind-icon">visit<wbr>Item</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-external"><a href="_src_classes_modelitems_selectitems_selectitemsvisitor_.selectitemsvisitor.html#visitkey" class="tsd-kind-icon">visit<wbr>Key</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-external"><a href="_src_classes_modelitems_selectitems_selectitemsvisitor_.selectitemsvisitor.html#visitpair" class="tsd-kind-icon">visit<wbr>Pair</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-external"><a href="_src_classes_modelitems_selectitems_selectitemsvisitor_.selectitemsvisitor.html#visitselectitems" class="tsd-kind-icon">visit<wbr>Select<wbr>Items</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-external"><a href="_src_classes_modelitems_selectitems_selectitemsvisitor_.selectitemsvisitor.html#visitvalue" class="tsd-kind-icon">visit<wbr>Value</a></li>
@@ -137,7 +138,7 @@
 					<div class="tsd-signature tsd-kind-icon">visit<wbr>Item<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">function</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/houfu/ergoform/blob/b39c166/src/classes/ModelItems/SelectItems/SelectItemsVisitor.ts#L29">src/classes/ModelItems/SelectItems/SelectItemsVisitor.ts:29</a></li>
+							<li>Defined in <a href="https://github.com/houfu/ergoform/blob/b14761b/src/classes/ModelItems/SelectItems/SelectItemsVisitor.ts#L29">src/classes/ModelItems/SelectItems/SelectItemsVisitor.ts:29</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -155,12 +156,35 @@
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-external">
+					<a name="visitkey" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> visit<wbr>Key</h3>
+					<div class="tsd-signature tsd-kind-icon">visit<wbr>Key<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">function</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/houfu/ergoform/blob/b14761b/src/classes/ModelItems/SelectItems/SelectItemsVisitor.ts#L50">src/classes/ModelItems/SelectItems/SelectItemsVisitor.ts:50</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Visit a parse tree produced by <code>SelectItemsParser.key</code>.</p>
+						</div>
+						<dl class="tsd-comment-tags">
+							<dt>param</dt>
+							<dd><p>the parse tree</p>
+							</dd>
+							<dt>returns</dt>
+							<dd><p>the visitor result</p>
+							</dd>
+						</dl>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-external">
 					<a name="visitpair" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> visit<wbr>Pair</h3>
 					<div class="tsd-signature tsd-kind-icon">visit<wbr>Pair<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">function</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/houfu/ergoform/blob/b39c166/src/classes/ModelItems/SelectItems/SelectItemsVisitor.ts#L36">src/classes/ModelItems/SelectItems/SelectItemsVisitor.ts:36</a></li>
+							<li>Defined in <a href="https://github.com/houfu/ergoform/blob/b14761b/src/classes/ModelItems/SelectItems/SelectItemsVisitor.ts#L36">src/classes/ModelItems/SelectItems/SelectItemsVisitor.ts:36</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -183,7 +207,7 @@
 					<div class="tsd-signature tsd-kind-icon">visit<wbr>Select<wbr>Items<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">function</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/houfu/ergoform/blob/b39c166/src/classes/ModelItems/SelectItems/SelectItemsVisitor.ts#L22">src/classes/ModelItems/SelectItems/SelectItemsVisitor.ts:22</a></li>
+							<li>Defined in <a href="https://github.com/houfu/ergoform/blob/b14761b/src/classes/ModelItems/SelectItems/SelectItemsVisitor.ts#L22">src/classes/ModelItems/SelectItems/SelectItemsVisitor.ts:22</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -206,7 +230,7 @@
 					<div class="tsd-signature tsd-kind-icon">visit<wbr>Value<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">function</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/houfu/ergoform/blob/b39c166/src/classes/ModelItems/SelectItems/SelectItemsVisitor.ts#L43">src/classes/ModelItems/SelectItems/SelectItemsVisitor.ts:43</a></li>
+							<li>Defined in <a href="https://github.com/houfu/ergoform/blob/b14761b/src/classes/ModelItems/SelectItems/SelectItemsVisitor.ts#L43">src/classes/ModelItems/SelectItems/SelectItemsVisitor.ts:43</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -381,6 +405,9 @@
 						<ul>
 							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-external">
 								<a href="_src_classes_modelitems_selectitems_selectitemsvisitor_.selectitemsvisitor.html#visititem" class="tsd-kind-icon">visit<wbr>Item</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-external">
+								<a href="_src_classes_modelitems_selectitems_selectitemsvisitor_.selectitemsvisitor.html#visitkey" class="tsd-kind-icon">visit<wbr>Key</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-external">
 								<a href="_src_classes_modelitems_selectitems_selectitemsvisitor_.selectitemsvisitor.html#visitpair" class="tsd-kind-icon">visit<wbr>Pair</a>
