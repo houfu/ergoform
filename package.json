@@ -1,19 +1,20 @@
 {
   "name": "ergoform",
-  "version": "0.8.0",
+  "version": "0.8.2",
   "description": "ergoform provides a framework for converting JSON objects into HTML forms",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
   "scripts": {
     "test": "jest",
     "test:watch": "jest --watch",
-    "build": "tsc",
+    "build": "tsc --skipLibCheck",
     "build:watch": "tsc --watch",
     "lint": "tslint --project \"./tsconfig.json\"",
     "docs": "typedoc --out docs --target ES5 --ignoreCompilerErrors --exclude spec/*",
     "antlr4ts-selectitems": "antlr4ts -visitor src/classes/ModelItems/SelectItems/SelectItems.g4",
     "antlr4ts-selectboxexpress": "antlr4ts -visitor -lib src/classes/ModelItems/SelectItems/ src/classes/ModelItems/SelectBoxExpress/SelectBoxExpress.g4",
-    "antlr4ts-ergoform": "antlr4ts -visitor -lib src/parser/grammars src/parser/grammars/ErgoForm.g4"
+    "antlr4ts-ergoform": "antlr4ts -visitor -lib src/parser/grammars src/parser/grammars/ErgoForm.g4",
+    "prepare": "npm run build"
   },
   "repository": {
     "type": "git",
@@ -26,10 +27,8 @@
   },
   "homepage": "https://github.com/houfu/ergoform#readme",
   "devDependencies": {
-    "@types/jasmine": "^2.8.9",
     "@types/jest": "^23.3.9",
     "antlr4ts-cli": "^0.4.0-alpha.4",
-    "jasmine": "^3.2.0",
     "jest": "^23.6.0",
     "ts-jest": "^23.10.4",
     "ts-node": "^7.0.1",
@@ -41,5 +40,10 @@
   "dependencies": {
     "antlr4": "^4.7.1",
     "antlr4ts": "^0.4.1-alpha.0"
-  }
+  },
+  "files": [
+    "lib/",
+    "README.md",
+    "LICENSE"
+  ]
 }
