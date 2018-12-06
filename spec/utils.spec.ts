@@ -17,7 +17,7 @@ describe('Utils are helper functions.', () => {
         }).toThrow();
     });
     describe('FillOptions transfers ItemFull options to an Item.', function () {
-        it('Simple Options should be filled properly', function () {
+        it('Simple OptionsStore should be filled properly', function () {
             let testItemFull: ItemFull = {options: {text: 'Hello Text', cssClass: 'test-css'}, type: TEXT_BOX};
             let target = new TextBox();
             fillOptions(target, testItemFull);

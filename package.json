@@ -1,6 +1,6 @@
 {
   "name": "ergoform",
-  "version": "0.8.2",
+  "version": "v0.8.2a",
   "description": "ergoform provides a framework for converting JSON objects into HTML forms",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
@@ -10,7 +10,7 @@
     "build": "tsc --skipLibCheck",
     "build:watch": "tsc --watch",
     "lint": "tslint --project \"./tsconfig.json\"",
-    "docs": "typedoc --out docs --target ES5 --ignoreCompilerErrors --exclude spec/*",
+    "docs": "typedoc --out docs --target ES5 --ignoreCompilerErrors --exclude spec/* --theme markdown",
     "antlr4ts-selectitems": "antlr4ts -visitor src/classes/ModelItems/SelectItems/SelectItems.g4",
     "antlr4ts-selectboxexpress": "antlr4ts -visitor -lib src/classes/ModelItems/SelectItems/ src/classes/ModelItems/SelectBoxExpress/SelectBoxExpress.g4",
     "antlr4ts-ergoform": "antlr4ts -visitor -lib src/parser/grammars src/parser/grammars/ErgoForm.g4",
@@ -35,6 +35,7 @@
     "tsconfig-paths": "^3.6.0",
     "tslint": "^5.11.0",
     "typedoc": "^0.13.0",
+    "typedoc-plugin-markdown": "^1.1.19",
     "typescript": "^3.1.6"
   },
   "dependencies": {

@@ -132,3 +132,6 @@ fabric.properties
 
 # lib
 lib
+
+# docs I use this to manually update the wiki
+doc

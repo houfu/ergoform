@@ -1,30 +1,54 @@
 import {IsItem} from "@classes/IsItem";
 import {ANTLRInputStream, CommonTokenStream} from "antlr4ts";
 import {ErgoFormLexer} from "./ErgoFormLexer";
-import {ErgoFormParser, ItemContext, ItemRowContext} from "./ErgoFormParser";
+import {ErgoFormContext, ErgoFormParser, ItemContext, ItemRowContext} from "./ErgoFormParser";
 import {createItemExpress, createItemFull, resolveItem} from "./ItemFactory";
+import {Options} from "@classes/MetaItems/Options";
+import {OptionsStore} from "@classes/MetaItems/OptionsStore";
+
+export class ErgoForm {
+    items: IsItem[] = [];
+    options: Options = new Options();
+
+    constructor(items?: IsItem[]) {
+        if (items) {
+            this.items = items;
+            getOptions(this);
+        }
+    }
+}
 
 /**
  * Main function for parsing an ErgoForm into an array of [[IsItem]].
  * @param {string} source
  * @returns {IsItem[] | undefined}
  */
-export function parseErgoForm(source: string): IsItem[] | undefined {
+export function parseErgoForm(source: string): ErgoForm {
     let inputStream = new ANTLRInputStream(source);
     let lexer = new ErgoFormLexer(inputStream);
     let tokenStream = new CommonTokenStream(lexer);
     let parser = new ErgoFormParser(tokenStream);
     const form = parser.ergoForm();
-    if (form) {
-        const items = form.items();
+    let result = parseErgoFormItems(form);
+    if (result) {
+        getOptions(result);
+        return result;
+    } else {
+        throw new Error('There are no items in the source ErgoForm');
+    }
+}
+
+function parseErgoFormItems(source: ErgoFormContext): ErgoForm | undefined {
+    if (source) {
+        const items = source.items();
         if (items) {
             const itemArray = items.item();
-            return parseItems(itemArray);
+            return new ErgoForm(parseItems(itemArray));
         }
-        const rows = form.itemRows();
+        const rows = source.itemRows();
         if (rows) {
             const rowArray = rows.itemRow();
-            return parseItemRows(rowArray)
+            return new ErgoForm(parseItemRows(rowArray));
         }
     }
 }
@@ -91,4 +115,11 @@ function parseItemRows(source: ItemRowContext[]): IsItem[] {
         }
     }
     return result;
+}
+
+function getOptions(source: ErgoForm) {
+    let option = source.items.find(value => value instanceof OptionsStore);
+    if (option) {
+        Object.assign(source.options, option)
+    }
 }

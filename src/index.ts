@@ -21,7 +21,7 @@ export * from "@classes/ContentItems/TextCollapse"
 export * from "@classes/ContentItems/TextHeader"
 
 // Meta Items
-export * from "@classes/MetaItems/Options"
+export * from "@classes/MetaItems/OptionsStore"
 
 // Model Items
 export * from "@classes/ModelItems/InputBox"
