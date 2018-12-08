@@ -1,20 +1,10 @@
 grammar ErgoForm;
 
-import Item;
+import Items, ItemRows;
 
 ergoForm
     : items
     | itemRows
     ;
 
-items
-    :   '[' item (',' item)* ']'
-    |   '[' ']'
-    ;
 
-itemRows
-    : itemRow+;
-
-itemRow
-    :   item ('\r' | '\n')
-    ;

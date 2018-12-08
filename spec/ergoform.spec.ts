@@ -62,15 +62,13 @@ describe('ErgoForm -- ', () => {
     describe('Parse ItemRows --', function () {
         it('Resolve ItemExpress', function () {
             const resultItems = [
-                //Alert
                 new Alert('Test Alert 1'),
                 new HorizontalLine(),
                 new CheckBox('Test CheckBox')
             ];
             const result = new ErgoForm(resultItems);
-            const testErgoForm1 = `"${ALERT}" : "Test Alert 1" \n
-            "${HORIZONTAL_LINE}" : "" \n
-            "${CHECK_BOX}": "Test CheckBox"`;
+            const testErgoForm1 = `"${ALERT}" : "Test Alert 1"  "${HORIZONTAL_LINE}" : "" "${CHECK_BOX}": "Test CheckBox"`;
+            console.log(testErgoForm1);
             expect(parseErgoForm(testErgoForm1)).toEqual(result);
         });
         it('Resolve ItemFull', function () {
