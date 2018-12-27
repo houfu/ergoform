@@ -1,9 +1,9 @@
-import {SelectBox} from "@classes/ModelItems/SelectBox";
+import {SelectBox} from "../SelectBox";
 import {ANTLRInputStream, CommonTokenStream} from "antlr4ts";
-import {SelectBoxExpressLexer} from "@classes/ModelItems/SelectBoxExpress/SelectBoxExpressLexer";
-import {SelectBoxExpressParser} from "@classes/ModelItems/SelectBoxExpress/SelectBoxExpressParser";
-import {removeQuotes} from "@classes/utils";
-import {SelectItem} from "@classes/ModelItems/SelectItems/SelectItem";
+import {SelectBoxExpressLexer} from "./SelectBoxExpressLexer";
+import {SelectBoxExpressParser} from "./SelectBoxExpressParser";
+import {removeQuotes} from "../../utils";
+import {SelectItem} from "../SelectItems/SelectItem";
 
 /**
  * Parse a SelectBox express item value. As a label and options are required for a SelectBox, the express value has to contain both information.

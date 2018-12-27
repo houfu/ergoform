@@ -1,5 +1,5 @@
-import {IsItem} from "@classes/IsItem";
-import {Item, ItemExpress, ItemFull} from "@classes/Item";
+import {IsItem} from "./IsItem";
+import {Item, ItemExpress, ItemFull} from "./Item";
 
 /**
  * Type guard to determine if [[Item]] is an [[ItemExpress]] or [[ItemFull]]

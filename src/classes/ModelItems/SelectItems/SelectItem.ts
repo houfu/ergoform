@@ -4,9 +4,9 @@
  */
 
 import {ANTLRInputStream, CommonTokenStream} from "antlr4ts";
-import {SelectItemsLexer} from "@classes/ModelItems/SelectItems/SelectItemsLexer";
-import {SelectItemsParser} from "@classes/ModelItems/SelectItems/SelectItemsParser";
-import {removeQuotes} from "@classes/utils";
+import {SelectItemsLexer} from "./SelectItemsLexer";
+import {SelectItemsParser} from "./SelectItemsParser";
+import {removeQuotes} from "../../utils";
 
 /**
  * An option in a [[SelectBox]].

@@ -3,11 +3,11 @@
  * Licensed under the MIT License. See LICENSE file in the project root for license information.
  */
 
-import {checkItemInConstructor, IsItem} from "@classes/IsItem";
-import {IsModel} from "@classes/ModelItems/IsModel";
-import {InputTypes} from "@classes/ModelItems/InputTypes";
-import {checkItemType, fillOptions, isItemExpress, parseBoolean} from "@classes/utils";
-import {Item} from "@classes/Item";
+import {checkItemInConstructor, IsItem} from "../IsItem";
+import {IsModel} from "./IsModel";
+import {InputTypes} from "./InputTypes";
+import {checkItemType, fillOptions, isItemExpress, parseBoolean} from "../utils";
+import {Item} from "../Item";
 
 /**
  * Identifier for the [[InputBox]] item.

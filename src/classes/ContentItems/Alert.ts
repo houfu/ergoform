@@ -3,10 +3,10 @@
  * Licensed under the MIT License. See LICENSE file in the project root for license information.
  */
 
-import {checkItemInConstructor, IsItem} from "@classes/IsItem";
-import {fillSemantic, IsSemantic, Semantic} from "@classes/ContentItems/Semantic";
-import {checkItemType, fillOptions, isItemExpress} from "@classes/utils";
-import {Item} from "@classes/Item";
+import {checkItemInConstructor, IsItem} from "../IsItem";
+import {fillSemantic, IsSemantic, Semantic} from "./Semantic";
+import {Item} from "../Item";
+import {checkItemType, fillOptions, isItemExpress} from "../utils";
 
 /**
  * Item identifier for the [[Alert]] Item

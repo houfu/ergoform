@@ -1,10 +1,9 @@
-import {IsItem} from "@classes/IsItem";
 import {ANTLRInputStream, CommonTokenStream} from "antlr4ts";
 import {ErgoFormLexer} from "./ErgoFormLexer";
 import {ErgoFormContext, ErgoFormParser, ItemContext, ItemRowContext} from "./ErgoFormParser";
 import {createItemExpress, createItemFull, resolveItem} from "./ItemFactory";
-import {Options} from "@classes/MetaItems/Options";
-import {OptionsStore} from "@classes/MetaItems/OptionsStore";
+import {IsItem, Options, OptionsStore} from "..";
+
 
 export class ErgoForm {
     items: IsItem[] = [];

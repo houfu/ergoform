@@ -3,9 +3,9 @@
  * Licensed under the MIT License. See LICENSE file in the project root for license information.
  */
 
-import {checkItemInConstructor, IsItem} from "@classes/IsItem";
-import {checkItemType, fillOptions, isItemExpress} from "@classes/utils";
-import {Item} from "@classes/Item";
+import {checkItemInConstructor, IsItem} from "../IsItem";
+import {checkItemType, fillOptions, isItemExpress} from "../utils";
+import {Item} from "../Item";
 
 /**
  * Item identifier for the [[TextHeader]] Item

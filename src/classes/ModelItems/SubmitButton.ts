@@ -3,9 +3,9 @@
  * Licensed under the MIT License. See LICENSE file in the project root for license information.
  */
 
-import {checkItemInConstructor, IsItem} from "@classes/IsItem";
-import {Item} from "@classes/Item";
-import {checkItemType, fillOptions, isItemExpress} from "@classes/utils";
+import {checkItemInConstructor, IsItem} from "../IsItem";
+import {Item} from "../Item";
+import {checkItemType, fillOptions, isItemExpress} from "../utils";
 
 /**
  * A string identifier for the [[SubmitButton]] item.

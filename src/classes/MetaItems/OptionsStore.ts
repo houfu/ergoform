@@ -3,10 +3,10 @@
  * Licensed under the MIT License. See LICENSE file in the project root for license information.
  */
 
-import {checkItemInConstructor, IsItem} from "@classes/IsItem";
-import {Item} from "@classes/Item";
-import {checkItemType, isItemExpress, parseBoolean} from "@classes/utils";
-import {Options} from "@classes/MetaItems/Options";
+import {checkItemInConstructor, IsItem} from "../IsItem";
+import {Item} from "../Item";
+import {checkItemType, isItemExpress, parseBoolean} from "../utils";
+import {Options} from "./Options";
 
 /**
  * Identifier for the [[OptionsStore]] item.

@@ -5,8 +5,8 @@
 
 import {checkItemInConstructor, IsItem} from "../IsItem";
 import {checkItemType, fillOptions, isItemExpress} from "../utils";
-import {fillSemantic, IsSemantic, Semantic} from "@classes/ContentItems/Semantic";
-import {Item} from "@classes/Item";
+import {fillSemantic, IsSemantic, Semantic} from "./Semantic";
+import {Item} from "../Item";
 
 /**
  * Item identifier for the [[TextBox]] Item

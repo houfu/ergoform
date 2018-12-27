@@ -3,12 +3,12 @@
  * Licensed under the MIT License. See LICENSE file in the project root for license information.
  */
 
-import {checkItemInConstructor, IsItem} from "@classes/IsItem";
-import {IsModel} from "@classes/ModelItems/IsModel";
-import {checkItemType, fillOptions, isItemExpress, parseBoolean} from "@classes/utils";
-import {parseSelectItems, SelectItem} from "@classes/ModelItems/SelectItems/SelectItem";
-import {Item} from "@classes/Item";
-import {parseSelectBoxExpress} from "@classes/ModelItems/SelectBoxExpress/SelectBoxExpress";
+import {checkItemInConstructor, IsItem} from "../IsItem";
+import {IsModel} from "./IsModel";
+import {checkItemType, fillOptions, isItemExpress, parseBoolean} from "../utils";
+import {parseSelectItems, SelectItem} from "./SelectItems/SelectItem";
+import {Item} from "../Item";
+import {parseSelectBoxExpress} from "./SelectBoxExpress/SelectBoxExpress";
 
 /**
  * A string identifier for the [[SelectBox]] item.

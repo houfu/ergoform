@@ -3,9 +3,9 @@
  * Licensed under the MIT License. See LICENSE file in the project root for license information.
  */
 
-import {IsItem} from "@classes/IsItem";
-import {checkItemType, isItemExpress} from "@classes/utils";
-import {Item} from "@classes/Item";
+import {IsItem} from "../IsItem";
+import {checkItemType, isItemExpress} from "../utils";
+import {Item} from "../Item";
 
 /**
  * Item identifier for the [[HorizontalLine]] class item.

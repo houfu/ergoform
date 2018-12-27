@@ -1,16 +1,31 @@
 import {ItemExpressContext, ItemFullContext} from "./ErgoFormParser";
-import {Item, ItemExpress, ItemFull} from "@classes/Item";
-import {IsItem, ItemConstructor} from "@classes/IsItem";
-import {Alert, ALERT} from "@classes/ContentItems/Alert";
-import {HORIZONTAL_LINE, HorizontalLine} from "@classes/ContentItems/HorizontalLine";
-import {TEXT_BOX, TextBox} from "@classes/ContentItems/TextBox";
-import {TEXT_COLLAPSE, TextCollapse} from "@classes/ContentItems/TextCollapse";
-import {TEXT_HEADER, TextHeader} from "@classes/ContentItems/TextHeader";
-import {CHECK_BOX, CheckBox} from "@classes/ModelItems/CheckBox";
-import {INPUT_BOX, InputBox} from "@classes/ModelItems/InputBox";
-import {SELECT_BOX, SelectBox} from "@classes/ModelItems/SelectBox";
-import {removeQuotes} from "@classes/utils";
-import {OPTIONS, OptionsStore} from "@classes/MetaItems/OptionsStore";
+import {
+    Alert,
+    ALERT,
+    CHECK_BOX,
+    CheckBox,
+    HORIZONTAL_LINE,
+    HorizontalLine,
+    INPUT_BOX,
+    InputBox,
+    IsItem,
+    Item,
+    ItemConstructor,
+    ItemExpress,
+    ItemFull,
+    OPTIONS,
+    OptionsStore,
+    removeQuotes,
+    SELECT_BOX,
+    SelectBox,
+    TEXT_BOX,
+    TEXT_COLLAPSE,
+    TEXT_HEADER,
+    TextBox,
+    TextCollapse,
+    TextHeader
+} from "..";
+
 
 /**
  * Type definition for a resolver function.
