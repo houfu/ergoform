@@ -103,7 +103,7 @@ export function parseSemantic(value: string): Semantic {
             return Semantic.light;
         case '8':
         case 'dark':
-            return Semantic.primary;
+            return Semantic.dark;
         default:
             return Semantic.none;
     }
