@@ -1,3 +1,8 @@
+/*
+ * Copyright (c) 2019. Ang Hou Fu.
+ * Licensed under the MIT License. See LICENSE file in the project root for license information.
+ */
+
 import {ANTLRInputStream, CommonTokenStream} from "antlr4ts";
 import {ErgoFormLexer} from "./ErgoFormLexer";
 import {ErgoFormContext, ErgoFormParser, ItemContext, ItemRowContext} from "./ErgoFormParser";
@@ -66,7 +71,7 @@ function parseItems(source: ItemContext[]): IsItem[] {
         const itemContext = item.itemExpress();
         if (itemContext) {
             const itemExpress = createItemExpress(itemContext);
-            const resolvedItem = resolveItem(itemExpress.type, itemExpress);
+            const resolvedItem = resolveItem(itemExpress);
             if (resolvedItem) {
                 result.push(resolvedItem)
             }
@@ -74,7 +79,7 @@ function parseItems(source: ItemContext[]): IsItem[] {
             const itemContext = item.itemFull();
             if (itemContext) {
                 const itemFull = createItemFull(itemContext);
-                const resolvedItem = resolveItem(itemFull.type, itemFull);
+                const resolvedItem = resolveItem(itemFull);
                 if (resolvedItem) {
                     result.push(resolvedItem)
                 }
@@ -98,7 +103,7 @@ function parseItemRows(source: ItemRowContext[]): IsItem[] {
         const itemContext = row.item().itemExpress();
         if (itemContext) {
             const itemExpress = createItemExpress(itemContext);
-            const resolvedItem = resolveItem(itemExpress.type, itemExpress);
+            const resolvedItem = resolveItem(itemExpress);
             if (resolvedItem) {
                 result.push(resolvedItem)
             }
@@ -106,7 +111,7 @@ function parseItemRows(source: ItemRowContext[]): IsItem[] {
             const itemContext = row.item().itemFull();
             if (itemContext) {
                 const itemFull = createItemFull(itemContext);
-                const resolvedItem = resolveItem(itemFull.type, itemFull);
+                const resolvedItem = resolveItem(itemFull);
                 if (resolvedItem) {
                     result.push(resolvedItem)
                 }

@@ -1,3 +1,8 @@
+/*
+ * Copyright (c) 2019. Ang Hou Fu.
+ * Licensed under the MIT License. See LICENSE file in the project root for license information.
+ */
+
 import {ItemExpressContext, ItemFullContext} from "./ErgoFormParser";
 import {
     Alert,
@@ -30,36 +35,30 @@ import {
 /**
  * Type definition for a resolver function.
  */
+/*
 export type resolver = (type: string, item: Item) => IsItem | undefined;
+*/
 
 /**
  * Main function for resolving an Item into its result.
- * @param {string} type The identifier of the Item
  * @param {Item} item The ItemExpress or ItemFull to be resolved.
- * @param {resolver} resolvers An array of custom resolvers.
  * Note that if the identifier used is the same as the default categories, it is overwritten.
  * @returns {IsItem | undefined} The result Item. If there is no resolution, returns **undefined**.
  */
-export function resolveItem(type: string, item: Item, ...resolvers: resolver[]): IsItem | undefined {
+export function resolveItem(item: Item): IsItem | undefined {
     let result;
-    result = defaultResolver(type, item);
-    resolvers.forEach(value => {
-        const resolveResult = value(type, item);
-        if (resolveResult) {
-            result = resolveResult;
-        }
-    });
+    result = defaultResolver(item);
+    // Plugin (not implemented yet)
     return result;
 }
 
 /**
  * Function for resolving default items. See [[resolveItem]]
- * @param {string} type
  * @param {Item} item
  * @returns {IsItem | undefined}
  */
-function defaultResolver(type: string, item: Item): IsItem | undefined {
-    switch (type) {
+function defaultResolver(item: Item): IsItem | undefined {
+    switch (item.type) {
         case ALERT: return createItemFromType(Alert, item);
         case HORIZONTAL_LINE: return createItemFromType(HorizontalLine, item);
         case TEXT_BOX: return createItemFromType(TextBox, item);
