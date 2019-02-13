@@ -1,7 +1,9 @@
-import {TEXT_BOX, TextBox} from "@classes/ContentItems/TextBox";
-import {ItemExpress, ItemFull} from "@classes/Item";
-import {Semantic} from "@classes/ContentItems/Semantic";
+/*
+ * Copyright (c) 2019. Ang Hou Fu.
+ * Licensed under the MIT License. See LICENSE file in the project root for license information.
+ */
 
+import {ItemExpress, ItemFull, Semantic, TEXT_BOX, TextBox} from "../src";
 
 describe('TextBox -', () => {
     describe('Converting Items. ', () => {

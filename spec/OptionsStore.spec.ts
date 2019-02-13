@@ -1,11 +1,10 @@
 /*
- * Copyright (c) 2018. Ang Hou Fu.
+ * Copyright (c) 2019. Ang Hou Fu.
  * Licensed under the MIT License. See LICENSE file in the project root for license information.
  */
 
 
-import {OPTIONS, OptionsStore} from "@classes/MetaItems/OptionsStore";
-import {ItemFull} from "@classes/Item";
+import {ItemFull, OPTIONS, OptionsStore} from "../src";
 
 describe('OptionsStore -- ', function () {
     describe('Should Convert an Item -- ', function () {

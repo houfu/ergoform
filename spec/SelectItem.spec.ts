@@ -1,4 +1,9 @@
-import {parseSelectItems, SelectItem} from "@classes/ModelItems/SelectItems/SelectItem";
+/*
+ * Copyright (c) 2019. Ang Hou Fu.
+ * Licensed under the MIT License. See LICENSE file in the project root for license information.
+ */
+
+import {parseSelectItems, SelectItem} from "../src";
 
 describe('SelectItem -- ', ()=> {
     describe('SelectItems Parsers should work.', function () {

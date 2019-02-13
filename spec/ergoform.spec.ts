@@ -1,10 +1,21 @@
-import {ALERT, Alert} from "@classes/ContentItems/Alert";
-import {Semantic} from "@classes/ContentItems/Semantic";
-import {HORIZONTAL_LINE, HorizontalLine} from "@classes/ContentItems/HorizontalLine";
-import {CHECK_BOX, CheckBox} from "@classes/ModelItems/CheckBox";
-import {ErgoForm, parseErgoForm} from "../src/parser/ErgoForm";
-import {OPTIONS, OptionsStore} from "@classes/MetaItems/OptionsStore";
-import {Options} from "@classes/MetaItems/Options";
+/*
+ * Copyright (c) 2019. Ang Hou Fu.
+ * Licensed under the MIT License. See LICENSE file in the project root for license information.
+ */
+
+import {
+    ALERT,
+    Alert,
+    CHECK_BOX,
+    CheckBox,
+    ErgoForm,
+    HORIZONTAL_LINE,
+    HorizontalLine,
+    OPTIONS,
+    OptionsStore,
+    parseErgoForm,
+    Semantic
+} from "../src";
 
 
 describe('ErgoForm -- ', () => {

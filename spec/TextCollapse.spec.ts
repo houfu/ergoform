@@ -1,6 +1,9 @@
-import {TEXT_COLLAPSE, TextCollapse} from "@classes/ContentItems/TextCollapse";
-import {ItemExpress, ItemFull} from "@classes/Item";
-import {Semantic} from "@classes/ContentItems/Semantic";
+/*
+ * Copyright (c) 2019. Ang Hou Fu.
+ * Licensed under the MIT License. See LICENSE file in the project root for license information.
+ */
+
+import {ItemExpress, ItemFull, Semantic, TEXT_COLLAPSE, TextCollapse} from "../src";
 
 describe('TextCollapse --', () => {
 
