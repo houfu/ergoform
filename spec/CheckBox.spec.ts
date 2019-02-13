@@ -1,5 +1,10 @@
-import {ItemExpress, ItemFull} from "@classes/Item";
-import {CHECK_BOX, CheckBox} from "@classes/ModelItems/CheckBox";
+/*
+ * Copyright (c) 2019. Ang Hou Fu.
+ * Licensed under the MIT License. See LICENSE file in the project root for license information.
+ */
+
+import {CHECK_BOX, CheckBox, ItemExpress, ItemFull} from "../src";
+
 
 describe('CheckBox -- ', () => {
     describe('Should convert from an Item. ', function () {

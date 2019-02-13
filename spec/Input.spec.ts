@@ -1,6 +1,10 @@
-import {ItemExpress, ItemFull} from "@classes/Item";
-import {INPUT_BOX, InputBox} from "@classes/ModelItems/InputBox";
-import {InputTypes} from "@classes/ModelItems/InputTypes";
+/*
+ * Copyright (c) 2019. Ang Hou Fu.
+ * Licensed under the MIT License. See LICENSE file in the project root for license information.
+ */
+
+import {INPUT_BOX, InputBox, InputTypes, ItemExpress, ItemFull} from "../src";
+
 
 describe('InputBox -- ', () => {
     describe('Should convert from an Item correctly. ', function () {

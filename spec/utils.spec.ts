@@ -1,7 +1,19 @@
-import {checkItemType, fillOptions, isItemExpress, parseBoolean} from "@classes/utils";
-import {ItemFull} from "@classes/Item";
-import {TEXT_BOX, TextBox} from "@classes/ContentItems/TextBox";
-import {TEXT_HEADER, TextHeader} from "@classes/ContentItems/TextHeader";
+/*
+ * Copyright (c) 2019. Ang Hou Fu.
+ * Licensed under the MIT License. See LICENSE file in the project root for license information.
+ */
+
+import {
+    checkItemType,
+    fillOptions,
+    isItemExpress,
+    ItemFull,
+    parseBoolean,
+    TEXT_BOX,
+    TEXT_HEADER,
+    TextBox,
+    TextHeader
+} from "../src";
 
 describe('Utils are helper functions.', () => {
     it('isItemExpress should determine the type correctly.', function () {

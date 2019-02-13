@@ -1,11 +1,11 @@
 /*
- * Copyright (c) 2018. Ang Hou Fu.
+ * Copyright (c) 2019. Ang Hou Fu.
  * Licensed under the MIT License. See LICENSE file in the project root for license information.
  */
 
 // ErgoForm
 export {ErgoForm, parseErgoForm} from "./parser/ErgoForm"
-export {resolver, resolveItem, createItemFromType} from "./parser/ItemFactory"
+export {resolveItem, createItemFromType} from "./parser/ItemFactory"
 
 // Item General
 export {IsItem, ItemConstructor, checkItemInConstructor} from "./classes/IsItem"

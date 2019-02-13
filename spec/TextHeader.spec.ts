@@ -1,5 +1,10 @@
-import {TEXT_HEADER, TextHeader} from "@classes/ContentItems/TextHeader";
-import {ItemExpress, ItemFull} from "@classes/Item";
+/*
+ * Copyright (c) 2019. Ang Hou Fu.
+ * Licensed under the MIT License. See LICENSE file in the project root for license information.
+ */
+
+import {ItemExpress, ItemFull, TEXT_HEADER, TextHeader} from "../src";
+
 
 describe('TextHeader -', ()=> {
     it('ConvertItem should convert ItemExpress', function () {

@@ -1,6 +1,10 @@
-import {ALERT, Alert} from "@classes/ContentItems/Alert";
-import {ItemExpress, ItemFull} from "@classes/Item";
-import {Semantic} from "@classes/ContentItems/Semantic";
+/*
+ * Copyright (c) 2019. Ang Hou Fu.
+ * Licensed under the MIT License. See LICENSE file in the project root for license information.
+ */
+
+import {ALERT, Alert, ItemExpress, ItemFull, Semantic} from "../src";
+
 
 describe('Alert -', () => {
     it('Should convert from an ItemExpress', function () {

@@ -1,10 +1,9 @@
 /*
- * Copyright (c) 2018. Ang Hou Fu.
+ * Copyright (c) 2019. Ang Hou Fu.
  * Licensed under the MIT License. See LICENSE file in the project root for license information.
  */
 
-import {ItemExpress, ItemFull} from "../src";
-import {SUBMIT_BUTTON, SubmitButton} from "../src/classes/ModelItems/SubmitButton";
+import {ItemExpress, ItemFull, SUBMIT_BUTTON, SubmitButton} from "../src";
 
 describe('SubmitButton -- ', function () {
     it('should convert from an ItemExpress', function () {
