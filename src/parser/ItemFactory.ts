@@ -23,6 +23,8 @@ import {
     removeQuotes,
     SELECT_BOX,
     SelectBox,
+    SUBMIT_BUTTON,
+    SubmitButton,
     TEXT_BOX,
     TEXT_COLLAPSE,
     TEXT_HEADER,
@@ -68,6 +70,8 @@ function defaultResolver(item: Item): IsItem | undefined {
         case INPUT_BOX: return createItemFromType(InputBox, item);
         case SELECT_BOX: return createItemFromType(SelectBox, item);
         case OPTIONS: return createItemFromType(OptionsStore, item);
+        case SUBMIT_BUTTON:
+            return createItemFromType(SubmitButton, item);
     }
 }
 

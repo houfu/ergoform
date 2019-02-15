@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2018. Ang Hou Fu.
+ * Copyright (c) 2019. Ang Hou Fu.
  * Licensed under the MIT License. See LICENSE file in the project root for license information.
  */
 
@@ -25,7 +25,7 @@ export interface ItemConstructor {
 }
 
 /**
- * Utility function for converting items passed into constructers using the type information of the specific Item class.
+ * Utility function for converting items passed into constructors using the type information of the specific Item class.
  * @param {T} source Source item
  * @param {Item | string} item The item to be converted
  * @param {(value: string) => void} stringFn Function if the value passed is a string and not an item.
