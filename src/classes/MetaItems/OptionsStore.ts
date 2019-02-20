@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2018. Ang Hou Fu.
+ * Copyright (c) 2019. Ang Hou Fu.
  * Licensed under the MIT License. See LICENSE file in the project root for license information.
  */
 
@@ -36,13 +36,15 @@ export class OptionsStore implements IsItem {
     ConvertItem(item: Item): void {
         checkItemType(item, OPTIONS);
         if (!isItemExpress(item)) {
-            for (let key in item.options) {
-                switch (key) {
-                    case 'simple_input':
-                        this.options.simple_input = parseBoolean(item.options[key]);
-                        return;
-                    default:
-                        this.options[key] = item.options[key];
+            for (const key in item.options) {
+                if (item.options.hasOwnProperty(key)) {
+                    switch (key) {
+                        case 'simple_input':
+                            this.options[key] = parseBoolean(item.options[key]);
+                            return;
+                        default:
+                            this.options[key] = item.options[key];
+                    }
                 }
             }
         } else {
