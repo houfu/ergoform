@@ -17,8 +17,14 @@ export class ErgoForm {
     constructor(items?: IsItem[]) {
         if (items) {
             this.items = items;
-            getOptions(this);
+            this.getOptions();
         }
+    }
+
+    private getOptions() {
+        const options = this.items.find(value => value instanceof OptionsStore);
+        Object.assign(this.options, options);
+
     }
 }
 
@@ -35,11 +41,9 @@ export function parseErgoForm(source: string): ErgoForm {
     const form = parser.ergoForm();
     let result = parseErgoFormItems(form);
     if (result) {
-        getOptions(result);
         return result;
-    } else {
-        throw new Error('There are no items in the source ErgoForm');
     }
+    throw new Error('There are no items in the source ErgoForm');
 }
 
 function parseErgoFormItems(source: ErgoFormContext): ErgoForm | undefined {
@@ -119,11 +123,4 @@ function parseItemRows(source: ItemRowContext[]): IsItem[] {
         }
     }
     return result;
-}
-
-function getOptions(source: ErgoForm) {
-    let option = source.items.find(value => value instanceof OptionsStore);
-    if (option) {
-        Object.assign(source.options, option)
-    }
 }
