@@ -37,20 +37,24 @@ import {
 /**
  * Type definition for a resolver function.
  */
-/*
-export type resolver = (type: string, item: Item) => IsItem | undefined;
-*/
+export type resolver = (item: Item) => IsItem | undefined;
 
 /**
  * Main function for resolving an Item into its result.
  * @param {Item} item The ItemExpress or ItemFull to be resolved.
  * Note that if the identifier used is the same as the default categories, it is overwritten.
+ * @param resolvers Custom resolvers which can be used to resolve a custom item.
  * @returns {IsItem | undefined} The result Item. If there is no resolution, returns **undefined**.
  */
-export function resolveItem(item: Item): IsItem | undefined {
+export function resolveItem(item: Item, ...resolvers: resolver[]): IsItem | undefined {
     let result;
     result = defaultResolver(item);
-    // Plugin (not implemented yet)
+    resolvers.forEach(value => {
+        const resolveResult = value(item);
+        if (resolveResult) {
+            result = resolveResult;
+        }
+    });
     return result;
 }
 
