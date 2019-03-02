@@ -37,7 +37,9 @@ import {
 /**
  * Type definition for a resolver function.
  */
-export type resolver = (item: Item) => IsItem | undefined;
+export interface resolver {
+    (item: Item): IsItem | undefined;
+}
 
 /**
  * Main function for resolving an Item into its result.
