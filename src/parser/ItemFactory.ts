@@ -18,6 +18,8 @@ import {
     ItemConstructor,
     ItemExpress,
     ItemFull,
+    MARKDOWN_BOX,
+    MarkdownBox,
     OPTIONS,
     OptionsStore,
     removeQuotes,
@@ -78,6 +80,8 @@ function defaultResolver(item: Item): IsItem | undefined {
         case OPTIONS: return createItemFromType(OptionsStore, item);
         case SUBMIT_BUTTON:
             return createItemFromType(SubmitButton, item);
+        case MARKDOWN_BOX:
+            return createItemFromType(MarkdownBox, item);
     }
 }
 

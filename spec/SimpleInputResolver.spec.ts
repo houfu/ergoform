@@ -4,7 +4,7 @@
  */
 
 import {InputBox, InputTypes, ItemExpress, ItemFull} from "../src";
-import {SimpleInputResolver} from "../src/Misc/SimpleInputResolver";
+import {SimpleInputResolver} from "../src/opt/SimpleInputResolver";
 
 describe('SimpleInputResolver', function () {
     describe('SimpleInputResolve should convert items', function () {

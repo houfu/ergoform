@@ -19,6 +19,7 @@ export {Semantic, IsSemantic, parseSemantic} from "./classes/ContentItems/Semant
 export {TextBox, TEXT_BOX} from "./classes/ContentItems/TextBox"
 export {TextCollapse, TEXT_COLLAPSE} from "./classes/ContentItems/TextCollapse"
 export {TextHeader, TEXT_HEADER} from "./classes/ContentItems/TextHeader"
+export {MARKDOWN_BOX, MarkdownBox} from "./classes/ContentItems/MarkdownBox"
 
 // Meta Items
 export {OPTIONS, OptionsStore} from "./classes/MetaItems/OptionsStore"
