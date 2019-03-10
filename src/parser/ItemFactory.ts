@@ -20,6 +20,8 @@ import {
     ItemFull,
     MARKDOWN_BOX,
     MarkdownBox,
+    NAV_BUTTON,
+    NavButton,
     OPTIONS,
     OptionsStore,
     removeQuotes,
@@ -82,6 +84,8 @@ function defaultResolver(item: Item): IsItem | undefined {
             return createItemFromType(SubmitButton, item);
         case MARKDOWN_BOX:
             return createItemFromType(MarkdownBox, item);
+        case NAV_BUTTON:
+            return createItemFromType(NavButton, item);
     }
 }
 

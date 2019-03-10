@@ -24,6 +24,7 @@ export {MARKDOWN_BOX, MarkdownBox} from "./classes/ContentItems/MarkdownBox"
 // Meta Items
 export {OPTIONS, OptionsStore} from "./classes/MetaItems/OptionsStore"
 export {Options} from "./classes/MetaItems/Options"
+export {NavButton, NAV_BUTTON} from "./classes/MetaItems/NavButton"
 
 // Model Items
 export {InputBox, INPUT_BOX} from "./classes/ModelItems/InputBox"
