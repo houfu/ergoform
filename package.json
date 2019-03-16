@@ -1,6 +1,6 @@
 {
   "name": "ergoform",
-  "version": "v0.8.4",
+  "version": "0.8.5",
   "description": "ergoform provides a framework for converting JSON objects into HTML forms",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
