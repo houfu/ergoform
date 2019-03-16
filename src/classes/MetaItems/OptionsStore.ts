@@ -40,6 +40,7 @@ export class OptionsStore implements IsItem {
                 if (item.options.hasOwnProperty(key)) {
                     switch (key) {
                         case 'simple_input':
+                        case 'mute_parser_errors':
                             this.options[key] = parseBoolean(item.options[key]);
                             return;
                         default:

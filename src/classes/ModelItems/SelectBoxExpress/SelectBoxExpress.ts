@@ -1,3 +1,8 @@
+/*
+ * Copyright (c) 2019. Ang Hou Fu.
+ * Licensed under the MIT License. See LICENSE file in the project root for license information.
+ */
+
 import {SelectBox} from "../SelectBox";
 import {ANTLRInputStream, CommonTokenStream} from "antlr4ts";
 import {SelectBoxExpressLexer} from "./SelectBoxExpressLexer";
@@ -25,7 +30,7 @@ export function parseSelectBoxExpress(target: SelectBox, source: string) {
         selectItems.item().forEach(item => {
             let pair = item.pair();
             if (pair) {
-                resultItems.push(new SelectItem(removeQuotes(pair.value()[0].text), removeQuotes(pair.value()[1].text)))
+                resultItems.push(new SelectItem(removeQuotes(pair.key().text), removeQuotes(pair.value().text)))
             } else {
                 const value = item.value();
                 if (value) {

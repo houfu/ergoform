@@ -5,8 +5,7 @@
 
 import {checkItemInConstructor, IsItem} from "../IsItem";
 import {Item} from "../Item";
-import {checkItemType, isItemExpress} from "../utils";
-import {fillOptions} from "../../../lib";
+import {checkItemType, fillOptions, isItemExpress} from "../utils";
 
 export const NAV_BUTTON = 'nav-button';
 
