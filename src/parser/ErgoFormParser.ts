@@ -3,7 +3,7 @@
  * Licensed under the MIT License. See LICENSE file in the project root for license information.
  */
 
-// Generated from src/parser/grammars/ErgoForm.g4 by ANTLR 4.6-SNAPSHOT
+// Generated from src/parser/grammars/ErgoForm.g4 by ANTLR 4.7.3-SNAPSHOT
 
 
 import {ATN} from "antlr4ts/atn/ATN";
@@ -52,7 +52,7 @@ export class ErgoFormParser extends Parser {
 	public static readonly RULE_itemRow = 12;
 	// tslint:disable:no-trailing-whitespace
 	public static readonly ruleNames: string[] = [
-		"ergoForm", "items", "item", "itemFull", "obj", "pair", "key", "value",
+        "ergoForm", "items", "item", "itemFull", "obj", "pair", "key", "value",
 		"itemExpress", "itemType", "expressValue", "itemRows", "itemRow",
 	];
 
@@ -60,7 +60,7 @@ export class ErgoFormParser extends Parser {
 		undefined, "'['", "','", "']'", "'{'", "'}'", "';'", "':'",
 	];
 	private static readonly _SYMBOLIC_NAMES: Array<string | undefined> = [
-		undefined, undefined, undefined, undefined, undefined, undefined, undefined,
+        undefined, undefined, undefined, undefined, undefined, undefined, undefined,
 		"COLON", "STRING", "NUMBER", "WS", "NEWLINE",
 	];
 	public static readonly VOCABULARY: Vocabulary = new VocabularyImpl(ErgoFormParser._LITERAL_NAMES, ErgoFormParser._SYMBOLIC_NAMES, []);
@@ -70,7 +70,6 @@ export class ErgoFormParser extends Parser {
 	public get vocabulary(): Vocabulary {
 		return ErgoFormParser.VOCABULARY;
 	}
-
 	// tslint:enable:no-trailing-whitespace
 
 	// @Override
@@ -86,7 +85,6 @@ export class ErgoFormParser extends Parser {
 		super(input);
 		this._interp = new ParserATNSimulator(ErgoFormParser._ATN, this);
 	}
-
 	// @RuleVersion(0)
 	public ergoForm(): ErgoFormContext {
 		let _localctx: ErgoFormContext = new ErgoFormContext(this._ctx, this.state);
@@ -98,14 +96,14 @@ export class ErgoFormParser extends Parser {
 			case ErgoFormParser.T__0:
 				this.enterOuterAlt(_localctx, 1);
 				{
-					this.state = 26;
+                    this.state = 26;
 				this.items();
 				}
 				break;
 			case ErgoFormParser.STRING:
 				this.enterOuterAlt(_localctx, 2);
 				{
-					this.state = 27;
+                    this.state = 27;
 				this.itemRows();
 				}
 				break;
@@ -127,7 +125,6 @@ export class ErgoFormParser extends Parser {
 		}
 		return _localctx;
 	}
-
 	// @RuleVersion(0)
 	public items(): ItemsContext {
 		let _localctx: ItemsContext = new ItemsContext(this._ctx, this.state);
@@ -136,31 +133,31 @@ export class ErgoFormParser extends Parser {
 		try {
 			this.state = 43;
 			this._errHandler.sync(this);
-			switch (this.interpreter.adaptivePredict(this._input, 2, this._ctx)) {
+            switch (this.interpreter.adaptivePredict(this._input, 2, this._ctx)) {
 			case 1:
 				this.enterOuterAlt(_localctx, 1);
 				{
-					this.state = 30;
+                    this.state = 30;
 				this.match(ErgoFormParser.T__0);
-					this.state = 31;
+                    this.state = 31;
 				this.item();
-					this.state = 36;
+                    this.state = 36;
 				this._errHandler.sync(this);
 				_la = this._input.LA(1);
-					while (_la === ErgoFormParser.T__1) {
+                    while (_la === ErgoFormParser.T__1) {
 					{
 					{
-						this.state = 32;
+                        this.state = 32;
 					this.match(ErgoFormParser.T__1);
-						this.state = 33;
+                        this.state = 33;
 					this.item();
 					}
 					}
-						this.state = 38;
+                        this.state = 38;
 					this._errHandler.sync(this);
 					_la = this._input.LA(1);
 				}
-					this.state = 39;
+                    this.state = 39;
 				this.match(ErgoFormParser.T__2);
 				}
 				break;
@@ -168,9 +165,9 @@ export class ErgoFormParser extends Parser {
 			case 2:
 				this.enterOuterAlt(_localctx, 2);
 				{
-					this.state = 41;
+                    this.state = 41;
 				this.match(ErgoFormParser.T__0);
-					this.state = 42;
+                    this.state = 42;
 				this.match(ErgoFormParser.T__2);
 				}
 				break;
@@ -190,7 +187,6 @@ export class ErgoFormParser extends Parser {
 		}
 		return _localctx;
 	}
-
 	// @RuleVersion(0)
 	public item(): ItemContext {
 		let _localctx: ItemContext = new ItemContext(this._ctx, this.state);
@@ -198,11 +194,11 @@ export class ErgoFormParser extends Parser {
 		try {
 			this.state = 47;
 			this._errHandler.sync(this);
-			switch (this.interpreter.adaptivePredict(this._input, 3, this._ctx)) {
+            switch (this.interpreter.adaptivePredict(this._input, 3, this._ctx)) {
 			case 1:
 				this.enterOuterAlt(_localctx, 1);
 				{
-					this.state = 45;
+                    this.state = 45;
 				this.itemExpress();
 				}
 				break;
@@ -210,7 +206,7 @@ export class ErgoFormParser extends Parser {
 			case 2:
 				this.enterOuterAlt(_localctx, 2);
 				{
-					this.state = 46;
+                    this.state = 46;
 				this.itemFull();
 				}
 				break;
@@ -230,7 +226,6 @@ export class ErgoFormParser extends Parser {
 		}
 		return _localctx;
 	}
-
 	// @RuleVersion(0)
 	public itemFull(): ItemFullContext {
 		let _localctx: ItemFullContext = new ItemFullContext(this._ctx, this.state);
@@ -238,11 +233,11 @@ export class ErgoFormParser extends Parser {
 		try {
 			this.enterOuterAlt(_localctx, 1);
 			{
-				this.state = 49;
+                this.state = 49;
 			this.itemType();
-				this.state = 50;
+                this.state = 50;
 			this.match(ErgoFormParser.COLON);
-				this.state = 51;
+                this.state = 51;
 			this.obj();
 			}
 		}
@@ -260,7 +255,6 @@ export class ErgoFormParser extends Parser {
 		}
 		return _localctx;
 	}
-
 	// @RuleVersion(0)
 	public obj(): ObjContext {
 		let _localctx: ObjContext = new ObjContext(this._ctx, this.state);
@@ -269,42 +263,42 @@ export class ErgoFormParser extends Parser {
 		try {
 			this.state = 66;
 			this._errHandler.sync(this);
-			switch (this.interpreter.adaptivePredict(this._input, 5, this._ctx)) {
+            switch (this.interpreter.adaptivePredict(this._input, 5, this._ctx)) {
 			case 1:
 				this.enterOuterAlt(_localctx, 1);
 				{
-					this.state = 53;
-					this.match(ErgoFormParser.T__3);
-					this.state = 54;
+                    this.state = 53;
+                    this.match(ErgoFormParser.T__3);
+                    this.state = 54;
 				this.pair();
-					this.state = 59;
+                    this.state = 59;
 				this._errHandler.sync(this);
 				_la = this._input.LA(1);
-					while (_la === ErgoFormParser.T__1) {
+                    while (_la === ErgoFormParser.T__1) {
 					{
 					{
-						this.state = 55;
+                        this.state = 55;
 					this.match(ErgoFormParser.T__1);
-						this.state = 56;
+                        this.state = 56;
 					this.pair();
 					}
 					}
-						this.state = 61;
+                        this.state = 61;
 					this._errHandler.sync(this);
 					_la = this._input.LA(1);
 				}
-					this.state = 62;
-					this.match(ErgoFormParser.T__4);
+                    this.state = 62;
+                    this.match(ErgoFormParser.T__4);
 				}
 				break;
 
 			case 2:
 				this.enterOuterAlt(_localctx, 2);
 				{
-					this.state = 64;
-					this.match(ErgoFormParser.T__3);
-					this.state = 65;
-					this.match(ErgoFormParser.T__4);
+                    this.state = 64;
+                    this.match(ErgoFormParser.T__3);
+                    this.state = 65;
+                    this.match(ErgoFormParser.T__4);
 				}
 				break;
 			}
@@ -323,7 +317,6 @@ export class ErgoFormParser extends Parser {
 		}
 		return _localctx;
 	}
-
 	// @RuleVersion(0)
 	public pair(): PairContext {
 		let _localctx: PairContext = new PairContext(this._ctx, this.state);
@@ -331,11 +324,11 @@ export class ErgoFormParser extends Parser {
 		try {
 			this.enterOuterAlt(_localctx, 1);
 			{
-				this.state = 68;
+                this.state = 68;
 			this.key();
-				this.state = 69;
+                this.state = 69;
 			this.match(ErgoFormParser.COLON);
-				this.state = 70;
+                this.state = 70;
 			this.value();
 			}
 		}
@@ -353,7 +346,6 @@ export class ErgoFormParser extends Parser {
 		}
 		return _localctx;
 	}
-
 	// @RuleVersion(0)
 	public key(): KeyContext {
 		let _localctx: KeyContext = new KeyContext(this._ctx, this.state);
@@ -361,7 +353,7 @@ export class ErgoFormParser extends Parser {
 		try {
 			this.enterOuterAlt(_localctx, 1);
 			{
-				this.state = 72;
+                this.state = 72;
 			this.match(ErgoFormParser.STRING);
 			}
 		}
@@ -379,7 +371,6 @@ export class ErgoFormParser extends Parser {
 		}
 		return _localctx;
 	}
-
 	// @RuleVersion(0)
 	public value(): ValueContext {
 		let _localctx: ValueContext = new ValueContext(this._ctx, this.state);
@@ -387,7 +378,7 @@ export class ErgoFormParser extends Parser {
 		try {
 			this.enterOuterAlt(_localctx, 1);
 			{
-				this.state = 74;
+                this.state = 74;
 			this.match(ErgoFormParser.STRING);
 			}
 		}
@@ -405,7 +396,6 @@ export class ErgoFormParser extends Parser {
 		}
 		return _localctx;
 	}
-
 	// @RuleVersion(0)
 	public itemExpress(): ItemExpressContext {
 		let _localctx: ItemExpressContext = new ItemExpressContext(this._ctx, this.state);
@@ -413,11 +403,11 @@ export class ErgoFormParser extends Parser {
 		try {
 			this.enterOuterAlt(_localctx, 1);
 			{
-				this.state = 76;
+                this.state = 76;
 			this.itemType();
-				this.state = 77;
+                this.state = 77;
 			this.match(ErgoFormParser.COLON);
-				this.state = 78;
+                this.state = 78;
 			this.expressValue();
 			}
 		}
@@ -435,7 +425,6 @@ export class ErgoFormParser extends Parser {
 		}
 		return _localctx;
 	}
-
 	// @RuleVersion(0)
 	public itemType(): ItemTypeContext {
 		let _localctx: ItemTypeContext = new ItemTypeContext(this._ctx, this.state);
@@ -443,7 +432,7 @@ export class ErgoFormParser extends Parser {
 		try {
 			this.enterOuterAlt(_localctx, 1);
 			{
-				this.state = 80;
+                this.state = 80;
 			this.match(ErgoFormParser.STRING);
 			}
 		}
@@ -461,7 +450,6 @@ export class ErgoFormParser extends Parser {
 		}
 		return _localctx;
 	}
-
 	// @RuleVersion(0)
 	public expressValue(): ExpressValueContext {
 		let _localctx: ExpressValueContext = new ExpressValueContext(this._ctx, this.state);
@@ -469,7 +457,7 @@ export class ErgoFormParser extends Parser {
 		try {
 			this.enterOuterAlt(_localctx, 1);
 			{
-				this.state = 82;
+                this.state = 82;
 			this.match(ErgoFormParser.STRING);
 			}
 		}
@@ -487,7 +475,6 @@ export class ErgoFormParser extends Parser {
 		}
 		return _localctx;
 	}
-
 	// @RuleVersion(0)
 	public itemRows(): ItemRowsContext {
 		let _localctx: ItemRowsContext = new ItemRowsContext(this._ctx, this.state);
@@ -496,22 +483,22 @@ export class ErgoFormParser extends Parser {
 		try {
 			this.enterOuterAlt(_localctx, 1);
 			{
-				this.state = 85;
-				this._errHandler.sync(this);
-				_la = this._input.LA(1);
-				do {
-					{
-						{
-							this.state = 84;
-							this.itemRow();
-						}
-					}
-					this.state = 87;
-					this._errHandler.sync(this);
-					_la = this._input.LA(1);
-				} while (_la === ErgoFormParser.STRING);
+                this.state = 85;
+                this._errHandler.sync(this);
+                _la = this._input.LA(1);
+                do {
+                    {
+                        {
+                            this.state = 84;
+                            this.itemRow();
+                        }
+                    }
+                    this.state = 87;
+                    this._errHandler.sync(this);
+                    _la = this._input.LA(1);
+                } while (_la === ErgoFormParser.STRING);
 			}
-		} catch (re) {
+        } catch (re) {
 			if (re instanceof RecognitionException) {
 				_localctx.exception = re;
 				this._errHandler.reportError(this, re);
@@ -519,12 +506,11 @@ export class ErgoFormParser extends Parser {
 			} else {
 				throw re;
 			}
-		} finally {
+        } finally {
 			this.exitRule();
 		}
 		return _localctx;
 	}
-
 	// @RuleVersion(0)
 	public itemRow(): ItemRowContext {
 		let _localctx: ItemRowContext = new ItemRowContext(this._ctx, this.state);
@@ -532,38 +518,38 @@ export class ErgoFormParser extends Parser {
 		try {
 			this.enterOuterAlt(_localctx, 1);
 			{
-				this.state = 89;
-				this.item();
-				this.state = 95;
-				this._errHandler.sync(this);
-				switch (this._input.LA(1)) {
-					case ErgoFormParser.T__1: {
-						this.state = 90;
-						this.match(ErgoFormParser.T__1);
-						this.state = 91;
-						this.match(ErgoFormParser.NEWLINE);
-					}
-						break;
-					case ErgoFormParser.T__5: {
-						this.state = 92;
-						this.match(ErgoFormParser.T__5);
-						this.state = 93;
-						this.match(ErgoFormParser.NEWLINE);
-					}
-						break;
-					case ErgoFormParser.NEWLINE: {
-						this.state = 94;
-						this.match(ErgoFormParser.NEWLINE);
-					}
-						break;
-					case ErgoFormParser.EOF:
-					case ErgoFormParser.STRING:
-						break;
-					default:
-						break;
-				}
+                this.state = 89;
+                this.item();
+                this.state = 95;
+                this._errHandler.sync(this);
+                switch (this._input.LA(1)) {
+                    case ErgoFormParser.T__1: {
+                        this.state = 90;
+                        this.match(ErgoFormParser.T__1);
+                        this.state = 91;
+                        this.match(ErgoFormParser.NEWLINE);
+                    }
+                        break;
+                    case ErgoFormParser.T__5: {
+                        this.state = 92;
+                        this.match(ErgoFormParser.T__5);
+                        this.state = 93;
+                        this.match(ErgoFormParser.NEWLINE);
+                    }
+                        break;
+                    case ErgoFormParser.NEWLINE: {
+                        this.state = 94;
+                        this.match(ErgoFormParser.NEWLINE);
+                    }
+                        break;
+                    case ErgoFormParser.EOF:
+                    case ErgoFormParser.STRING:
+                        break;
+                    default:
+                        break;
+                }
 			}
-		} catch (re) {
+        } catch (re) {
 			if (re instanceof RecognitionException) {
 				_localctx.exception = re;
 				this._errHandler.reportError(this, re);
@@ -571,14 +557,14 @@ export class ErgoFormParser extends Parser {
 			} else {
 				throw re;
 			}
-		} finally {
+        } finally {
 			this.exitRule();
 		}
 		return _localctx;
 	}
 
 	public static readonly _serializedATN: string =
-		"\x03\uAF6F\u8320\u479D\uB75C\u4880\u1605\u191C\uAB37\x03\rd\x04\x02\t" +
+        "\x03\uC91D\uCABA\u058D\uAFBA\u4F53\u0607\uEA8B\uC241\x03\rd\x04\x02\t" +
 		"\x02\x04\x03\t\x03\x04\x04\t\x04\x04\x05\t\x05\x04\x06\t\x06\x04\x07\t" +
 		"\x07\x04\b\t\b\x04\t\t\t\x04\n\t\n\x04\v\t\v\x04\f\t\f\x04\r\t\r\x04\x0E" +
 		"\t\x0E\x03\x02\x03\x02\x05\x02\x1F\n\x02\x03\x03\x03\x03\x03\x03\x03\x03" +
@@ -590,26 +576,26 @@ export class ErgoFormParser extends Parser {
 		"\f\x03\f\x03\r\x06\rX\n\r\r\r\x0E\rY\x03\x0E\x03\x0E\x03\x0E\x03\x0E\x03" +
 		"\x0E\x03\x0E\x05\x0Eb\n\x0E\x03\x0E\x02\x02\x02\x0F\x02\x02\x04\x02\x06" +
 		"\x02\b\x02\n\x02\f\x02\x0E\x02\x10\x02\x12\x02\x14\x02\x16\x02\x18\x02" +
-		"\x1A\x02\x02\x02`\x02\x1E\x03\x02\x02\x02\x04-\x03\x02\x02\x02\x061\x03" +
-		"\x02\x02\x02\b3\x03\x02\x02\x02\nD\x03\x02\x02\x02\fF\x03\x02\x02\x02" +
-		"\x0EJ\x03\x02\x02\x02\x10L\x03\x02\x02\x02\x12N\x03\x02\x02\x02\x14R\x03" +
-		"\x02\x02\x02\x16T\x03\x02\x02\x02\x18W\x03\x02\x02\x02\x1A[\x03\x02\x02" +
-		"\x02\x1C\x1F\x05\x04\x03\x02\x1D\x1F\x05\x18\r\x02\x1E\x1C\x03\x02\x02" +
-		"\x02\x1E\x1D\x03\x02\x02\x02\x1F\x03\x03\x02\x02\x02 !\x07\x03\x02\x02" +
-		"!&\x05\x06\x04\x02\"#\x07\x04\x02\x02#%\x05\x06\x04\x02$\"\x03\x02\x02" +
-		"\x02%(\x03\x02\x02\x02&$\x03\x02\x02\x02&\'\x03\x02\x02\x02\')\x03\x02" +
-		"\x02\x02(&\x03\x02\x02\x02)*\x07\x05\x02\x02*.\x03\x02\x02\x02+,\x07\x03" +
-		"\x02\x02,.\x07\x05\x02\x02- \x03\x02\x02\x02-+\x03\x02\x02\x02.\x05\x03" +
-		"\x02\x02\x02/2\x05\x12\n\x0202\x05\b\x05\x021/\x03\x02\x02\x0210\x03\x02" +
-		"\x02\x022\x07\x03\x02\x02\x0234\x05\x14\v\x0245\x07\t\x02\x0256\x05\n" +
-		"\x06\x026\t\x03\x02\x02\x0278\x07\x06\x02\x028=\x05\f\x07\x029:\x07\x04" +
-		"\x02\x02:<\x05\f\x07\x02;9\x03\x02\x02\x02<?\x03\x02\x02\x02=;\x03\x02" +
-		"\x02\x02=>\x03\x02\x02\x02>@\x03\x02\x02\x02?=\x03\x02\x02\x02@A\x07\x07" +
-		"\x02\x02AE\x03\x02\x02\x02BC\x07\x06\x02\x02CE\x07\x07\x02\x02D7\x03\x02" +
-		"\x02\x02DB\x03\x02\x02\x02E\v\x03\x02\x02\x02FG\x05\x0E\b\x02GH\x07\t" +
-		"\x02\x02HI\x05\x10\t\x02I\r\x03\x02\x02\x02JK\x07\n\x02\x02K\x0F\x03\x02" +
-		"\x02\x02LM\x07\n\x02\x02M\x11\x03\x02\x02\x02NO\x05\x14\v\x02OP\x07\t" +
-		"\x02\x02PQ\x05\x16\f\x02Q\x13\x03\x02\x02\x02RS\x07\n\x02\x02S\x15\x03" +
+        "\x1A\x02\x02\x02\x02`\x02\x1E\x03\x02\x02\x02\x04-\x03\x02\x02\x02\x06" +
+        "1\x03\x02\x02\x02\b3\x03\x02\x02\x02\nD\x03\x02\x02\x02\fF\x03\x02\x02" +
+        "\x02\x0EJ\x03\x02\x02\x02\x10L\x03\x02\x02\x02\x12N\x03\x02\x02\x02\x14" +
+        "R\x03\x02\x02\x02\x16T\x03\x02\x02\x02\x18W\x03\x02\x02\x02\x1A[\x03\x02" +
+        "\x02\x02\x1C\x1F\x05\x04\x03\x02\x1D\x1F\x05\x18\r\x02\x1E\x1C\x03\x02" +
+        "\x02\x02\x1E\x1D\x03\x02\x02\x02\x1F\x03\x03\x02\x02\x02 !\x07\x03\x02" +
+        "\x02!&\x05\x06\x04\x02\"#\x07\x04\x02\x02#%\x05\x06\x04\x02$\"\x03\x02" +
+        "\x02\x02%(\x03\x02\x02\x02&$\x03\x02\x02\x02&\'\x03\x02\x02\x02\')\x03" +
+        "\x02\x02\x02(&\x03\x02\x02\x02)*\x07\x05\x02\x02*.\x03\x02\x02\x02+,\x07" +
+        "\x03\x02\x02,.\x07\x05\x02\x02- \x03\x02\x02\x02-+\x03\x02\x02\x02.\x05" +
+        "\x03\x02\x02\x02/2\x05\x12\n\x0202\x05\b\x05\x021/\x03\x02\x02\x0210\x03" +
+        "\x02\x02\x022\x07\x03\x02\x02\x0234\x05\x14\v\x0245\x07\t\x02\x0256\x05" +
+        "\n\x06\x026\t\x03\x02\x02\x0278\x07\x06\x02\x028=\x05\f\x07\x029:\x07" +
+        "\x04\x02\x02:<\x05\f\x07\x02;9\x03\x02\x02\x02<?\x03\x02\x02\x02=;\x03" +
+        "\x02\x02\x02=>\x03\x02\x02\x02>@\x03\x02\x02\x02?=\x03\x02\x02\x02@A\x07" +
+        "\x07\x02\x02AE\x03\x02\x02\x02BC\x07\x06\x02\x02CE\x07\x07\x02\x02D7\x03" +
+        "\x02\x02\x02DB\x03\x02\x02\x02E\v\x03\x02\x02\x02FG\x05\x0E\b\x02GH\x07" +
+        "\t\x02\x02HI\x05\x10\t\x02I\r\x03\x02\x02\x02JK\x07\n\x02\x02K\x0F\x03" +
+        "\x02\x02\x02LM\x07\n\x02\x02M\x11\x03\x02\x02\x02NO\x05\x14\v\x02OP\x07" +
+        "\t\x02\x02PQ\x05\x16\f\x02Q\x13\x03\x02\x02\x02RS\x07\n\x02\x02S\x15\x03" +
 		"\x02\x02\x02TU\x07\n\x02\x02U\x17\x03\x02\x02\x02VX\x05\x1A\x0E\x02WV" +
 		"\x03\x02\x02\x02XY\x03\x02\x02\x02YW\x03\x02\x02\x02YZ\x03\x02\x02\x02" +
 		"Z\x19\x03\x02\x02\x02[a\x05\x06\x04\x02\\]\x07\x04\x02\x02]b\x07\r\x02" +
@@ -634,30 +620,25 @@ export class ErgoFormContext extends ParserRuleContext {
 	public itemRows(): ItemRowsContext | undefined {
 		return this.tryGetRuleContext(0, ItemRowsContext);
 	}
-
 	constructor(parent: ParserRuleContext | undefined, invokingState: number) {
 		super(parent, invokingState);
 	}
-
 	// @Override
-	public get ruleIndex(): number {
-		return ErgoFormParser.RULE_ergoForm;
-	}
-
+    public get ruleIndex(): number {
+        return ErgoFormParser.RULE_ergoForm;
+    }
 	// @Override
 	public enterRule(listener: ErgoFormListener): void {
 		if (listener.enterErgoForm) {
 			listener.enterErgoForm(this);
 		}
 	}
-
 	// @Override
 	public exitRule(listener: ErgoFormListener): void {
 		if (listener.exitErgoForm) {
 			listener.exitErgoForm(this);
 		}
 	}
-
 	// @Override
 	public accept<Result>(visitor: ErgoFormVisitor<Result>): Result {
 		if (visitor.visitErgoForm) {
@@ -679,30 +660,25 @@ export class ItemsContext extends ParserRuleContext {
 			return this.getRuleContext(i, ItemContext);
 		}
 	}
-
 	constructor(parent: ParserRuleContext | undefined, invokingState: number) {
 		super(parent, invokingState);
 	}
-
 	// @Override
-	public get ruleIndex(): number {
-		return ErgoFormParser.RULE_items;
-	}
-
+    public get ruleIndex(): number {
+        return ErgoFormParser.RULE_items;
+    }
 	// @Override
 	public enterRule(listener: ErgoFormListener): void {
 		if (listener.enterItems) {
 			listener.enterItems(this);
 		}
 	}
-
 	// @Override
 	public exitRule(listener: ErgoFormListener): void {
 		if (listener.exitItems) {
 			listener.exitItems(this);
 		}
 	}
-
 	// @Override
 	public accept<Result>(visitor: ErgoFormVisitor<Result>): Result {
 		if (visitor.visitItems) {
@@ -721,30 +697,25 @@ export class ItemContext extends ParserRuleContext {
 	public itemFull(): ItemFullContext | undefined {
 		return this.tryGetRuleContext(0, ItemFullContext);
 	}
-
 	constructor(parent: ParserRuleContext | undefined, invokingState: number) {
 		super(parent, invokingState);
 	}
-
 	// @Override
-	public get ruleIndex(): number {
-		return ErgoFormParser.RULE_item;
-	}
-
+    public get ruleIndex(): number {
+        return ErgoFormParser.RULE_item;
+    }
 	// @Override
 	public enterRule(listener: ErgoFormListener): void {
 		if (listener.enterItem) {
 			listener.enterItem(this);
 		}
 	}
-
 	// @Override
 	public exitRule(listener: ErgoFormListener): void {
 		if (listener.exitItem) {
 			listener.exitItem(this);
 		}
 	}
-
 	// @Override
 	public accept<Result>(visitor: ErgoFormVisitor<Result>): Result {
 		if (visitor.visitItem) {
@@ -764,30 +735,25 @@ export class ItemFullContext extends ParserRuleContext {
 	public obj(): ObjContext {
 		return this.getRuleContext(0, ObjContext);
 	}
-
 	constructor(parent: ParserRuleContext | undefined, invokingState: number) {
 		super(parent, invokingState);
 	}
-
 	// @Override
-	public get ruleIndex(): number {
-		return ErgoFormParser.RULE_itemFull;
-	}
-
+    public get ruleIndex(): number {
+        return ErgoFormParser.RULE_itemFull;
+    }
 	// @Override
 	public enterRule(listener: ErgoFormListener): void {
 		if (listener.enterItemFull) {
 			listener.enterItemFull(this);
 		}
 	}
-
 	// @Override
 	public exitRule(listener: ErgoFormListener): void {
 		if (listener.exitItemFull) {
 			listener.exitItemFull(this);
 		}
 	}
-
 	// @Override
 	public accept<Result>(visitor: ErgoFormVisitor<Result>): Result {
 		if (visitor.visitItemFull) {
@@ -809,30 +775,25 @@ export class ObjContext extends ParserRuleContext {
 			return this.getRuleContext(i, PairContext);
 		}
 	}
-
 	constructor(parent: ParserRuleContext | undefined, invokingState: number) {
 		super(parent, invokingState);
 	}
-
 	// @Override
-	public get ruleIndex(): number {
-		return ErgoFormParser.RULE_obj;
-	}
-
+    public get ruleIndex(): number {
+        return ErgoFormParser.RULE_obj;
+    }
 	// @Override
 	public enterRule(listener: ErgoFormListener): void {
 		if (listener.enterObj) {
 			listener.enterObj(this);
 		}
 	}
-
 	// @Override
 	public exitRule(listener: ErgoFormListener): void {
 		if (listener.exitObj) {
 			listener.exitObj(this);
 		}
 	}
-
 	// @Override
 	public accept<Result>(visitor: ErgoFormVisitor<Result>): Result {
 		if (visitor.visitObj) {
@@ -848,33 +809,32 @@ export class PairContext extends ParserRuleContext {
 	public key(): KeyContext {
 		return this.getRuleContext(0, KeyContext);
 	}
+
+    public COLON(): TerminalNode {
+        return this.getToken(ErgoFormParser.COLON, 0);
+    }
 	public value(): ValueContext {
 		return this.getRuleContext(0, ValueContext);
 	}
-
 	constructor(parent: ParserRuleContext | undefined, invokingState: number) {
 		super(parent, invokingState);
 	}
-
 	// @Override
-	public get ruleIndex(): number {
-		return ErgoFormParser.RULE_pair;
-	}
-
+    public get ruleIndex(): number {
+        return ErgoFormParser.RULE_pair;
+    }
 	// @Override
 	public enterRule(listener: ErgoFormListener): void {
 		if (listener.enterPair) {
 			listener.enterPair(this);
 		}
 	}
-
 	// @Override
 	public exitRule(listener: ErgoFormListener): void {
 		if (listener.exitPair) {
 			listener.exitPair(this);
 		}
 	}
-
 	// @Override
 	public accept<Result>(visitor: ErgoFormVisitor<Result>): Result {
 		if (visitor.visitPair) {
@@ -888,30 +848,25 @@ export class PairContext extends ParserRuleContext {
 
 export class KeyContext extends ParserRuleContext {
 	public STRING(): TerminalNode { return this.getToken(ErgoFormParser.STRING, 0); }
-
 	constructor(parent: ParserRuleContext | undefined, invokingState: number) {
 		super(parent, invokingState);
 	}
-
 	// @Override
-	public get ruleIndex(): number {
-		return ErgoFormParser.RULE_key;
-	}
-
+    public get ruleIndex(): number {
+        return ErgoFormParser.RULE_key;
+    }
 	// @Override
 	public enterRule(listener: ErgoFormListener): void {
 		if (listener.enterKey) {
 			listener.enterKey(this);
 		}
 	}
-
 	// @Override
 	public exitRule(listener: ErgoFormListener): void {
 		if (listener.exitKey) {
 			listener.exitKey(this);
 		}
 	}
-
 	// @Override
 	public accept<Result>(visitor: ErgoFormVisitor<Result>): Result {
 		if (visitor.visitKey) {
@@ -925,30 +880,25 @@ export class KeyContext extends ParserRuleContext {
 
 export class ValueContext extends ParserRuleContext {
 	public STRING(): TerminalNode { return this.getToken(ErgoFormParser.STRING, 0); }
-
 	constructor(parent: ParserRuleContext | undefined, invokingState: number) {
 		super(parent, invokingState);
 	}
-
 	// @Override
-	public get ruleIndex(): number {
-		return ErgoFormParser.RULE_value;
-	}
-
+    public get ruleIndex(): number {
+        return ErgoFormParser.RULE_value;
+    }
 	// @Override
 	public enterRule(listener: ErgoFormListener): void {
 		if (listener.enterValue) {
 			listener.enterValue(this);
 		}
 	}
-
 	// @Override
 	public exitRule(listener: ErgoFormListener): void {
 		if (listener.exitValue) {
 			listener.exitValue(this);
 		}
 	}
-
 	// @Override
 	public accept<Result>(visitor: ErgoFormVisitor<Result>): Result {
 		if (visitor.visitValue) {
@@ -968,30 +918,25 @@ export class ItemExpressContext extends ParserRuleContext {
 	public expressValue(): ExpressValueContext {
 		return this.getRuleContext(0, ExpressValueContext);
 	}
-
 	constructor(parent: ParserRuleContext | undefined, invokingState: number) {
 		super(parent, invokingState);
 	}
-
 	// @Override
-	public get ruleIndex(): number {
-		return ErgoFormParser.RULE_itemExpress;
-	}
-
+    public get ruleIndex(): number {
+        return ErgoFormParser.RULE_itemExpress;
+    }
 	// @Override
 	public enterRule(listener: ErgoFormListener): void {
 		if (listener.enterItemExpress) {
 			listener.enterItemExpress(this);
 		}
 	}
-
 	// @Override
 	public exitRule(listener: ErgoFormListener): void {
 		if (listener.exitItemExpress) {
 			listener.exitItemExpress(this);
 		}
 	}
-
 	// @Override
 	public accept<Result>(visitor: ErgoFormVisitor<Result>): Result {
 		if (visitor.visitItemExpress) {
@@ -1005,30 +950,25 @@ export class ItemExpressContext extends ParserRuleContext {
 
 export class ItemTypeContext extends ParserRuleContext {
 	public STRING(): TerminalNode { return this.getToken(ErgoFormParser.STRING, 0); }
-
 	constructor(parent: ParserRuleContext | undefined, invokingState: number) {
 		super(parent, invokingState);
 	}
-
 	// @Override
-	public get ruleIndex(): number {
-		return ErgoFormParser.RULE_itemType;
-	}
-
+    public get ruleIndex(): number {
+        return ErgoFormParser.RULE_itemType;
+    }
 	// @Override
 	public enterRule(listener: ErgoFormListener): void {
 		if (listener.enterItemType) {
 			listener.enterItemType(this);
 		}
 	}
-
 	// @Override
 	public exitRule(listener: ErgoFormListener): void {
 		if (listener.exitItemType) {
 			listener.exitItemType(this);
 		}
 	}
-
 	// @Override
 	public accept<Result>(visitor: ErgoFormVisitor<Result>): Result {
 		if (visitor.visitItemType) {
@@ -1042,30 +982,25 @@ export class ItemTypeContext extends ParserRuleContext {
 
 export class ExpressValueContext extends ParserRuleContext {
 	public STRING(): TerminalNode { return this.getToken(ErgoFormParser.STRING, 0); }
-
 	constructor(parent: ParserRuleContext | undefined, invokingState: number) {
 		super(parent, invokingState);
 	}
-
 	// @Override
-	public get ruleIndex(): number {
-		return ErgoFormParser.RULE_expressValue;
-	}
-
+    public get ruleIndex(): number {
+        return ErgoFormParser.RULE_expressValue;
+    }
 	// @Override
 	public enterRule(listener: ErgoFormListener): void {
 		if (listener.enterExpressValue) {
 			listener.enterExpressValue(this);
 		}
 	}
-
 	// @Override
 	public exitRule(listener: ErgoFormListener): void {
 		if (listener.exitExpressValue) {
 			listener.exitExpressValue(this);
 		}
 	}
-
 	// @Override
 	public accept<Result>(visitor: ErgoFormVisitor<Result>): Result {
 		if (visitor.visitExpressValue) {
@@ -1087,30 +1022,25 @@ export class ItemRowsContext extends ParserRuleContext {
 			return this.getRuleContext(i, ItemRowContext);
 		}
 	}
-
 	constructor(parent: ParserRuleContext | undefined, invokingState: number) {
 		super(parent, invokingState);
 	}
-
 	// @Override
-	public get ruleIndex(): number {
-		return ErgoFormParser.RULE_itemRows;
-	}
-
+    public get ruleIndex(): number {
+        return ErgoFormParser.RULE_itemRows;
+    }
 	// @Override
 	public enterRule(listener: ErgoFormListener): void {
 		if (listener.enterItemRows) {
 			listener.enterItemRows(this);
 		}
 	}
-
 	// @Override
 	public exitRule(listener: ErgoFormListener): void {
 		if (listener.exitItemRows) {
 			listener.exitItemRows(this);
 		}
 	}
-
 	// @Override
 	public accept<Result>(visitor: ErgoFormVisitor<Result>): Result {
 		if (visitor.visitItemRows) {
@@ -1127,33 +1057,28 @@ export class ItemRowContext extends ParserRuleContext {
 		return this.getRuleContext(0, ItemContext);
 	}
 
-	public NEWLINE(): TerminalNode | undefined {
-		return this.tryGetToken(ErgoFormParser.NEWLINE, 0);
-	}
-
+    public NEWLINE(): TerminalNode | undefined {
+        return this.tryGetToken(ErgoFormParser.NEWLINE, 0);
+    }
 	constructor(parent: ParserRuleContext | undefined, invokingState: number) {
 		super(parent, invokingState);
 	}
-
 	// @Override
-	public get ruleIndex(): number {
-		return ErgoFormParser.RULE_itemRow;
-	}
-
+    public get ruleIndex(): number {
+        return ErgoFormParser.RULE_itemRow;
+    }
 	// @Override
 	public enterRule(listener: ErgoFormListener): void {
 		if (listener.enterItemRow) {
 			listener.enterItemRow(this);
 		}
 	}
-
 	// @Override
 	public exitRule(listener: ErgoFormListener): void {
 		if (listener.exitItemRow) {
 			listener.exitItemRow(this);
 		}
 	}
-
 	// @Override
 	public accept<Result>(visitor: ErgoFormVisitor<Result>): Result {
 		if (visitor.visitItemRow) {
