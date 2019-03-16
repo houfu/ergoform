@@ -1,10 +1,14 @@
+/*
+ * Copyright (c) 2019. Ang Hou Fu.
+ * Licensed under the MIT License. See LICENSE file in the project root for license information.
+ */
+
 // Generated from src/parser/grammars/ErgoForm.g4 by ANTLR 4.6-SNAPSHOT
 
 
-import {ParseTreeVisitor} from 'antlr4ts/tree/ParseTreeVisitor';
+import {ParseTreeVisitor} from "antlr4ts/tree/ParseTreeVisitor";
 
 import {
-    ArrayContext,
     ErgoFormContext,
     ExpressValueContext,
     ItemContext,
@@ -18,7 +22,7 @@ import {
     ObjContext,
     PairContext,
     ValueContext
-} from './ErgoFormParser';
+} from "./ErgoFormParser";
 
 
 /**
@@ -42,20 +46,6 @@ export interface ErgoFormVisitor<Result> extends ParseTreeVisitor<Result> {
 	 * @return the visitor result
 	 */
 	visitItems?: (ctx: ItemsContext) => Result;
-
-	/**
-	 * Visit a parse tree produced by `ErgoFormParser.itemRows`.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	visitItemRows?: (ctx: ItemRowsContext) => Result;
-
-	/**
-	 * Visit a parse tree produced by `ErgoFormParser.itemRow`.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	visitItemRow?: (ctx: ItemRowContext) => Result;
 
 	/**
 	 * Visit a parse tree produced by `ErgoFormParser.item`.
@@ -84,13 +74,6 @@ export interface ErgoFormVisitor<Result> extends ParseTreeVisitor<Result> {
 	 * @return the visitor result
 	 */
 	visitPair?: (ctx: PairContext) => Result;
-
-	/**
-	 * Visit a parse tree produced by `ErgoFormParser.array`.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	visitArray?: (ctx: ArrayContext) => Result;
 
 	/**
 	 * Visit a parse tree produced by `ErgoFormParser.key`.
@@ -126,5 +109,19 @@ export interface ErgoFormVisitor<Result> extends ParseTreeVisitor<Result> {
 	 * @return the visitor result
 	 */
 	visitExpressValue?: (ctx: ExpressValueContext) => Result;
+
+    /**
+     * Visit a parse tree produced by `ErgoFormParser.itemRows`.
+     * @param ctx the parse tree
+     * @return the visitor result
+     */
+    visitItemRows?: (ctx: ItemRowsContext) => Result;
+
+    /**
+     * Visit a parse tree produced by `ErgoFormParser.itemRow`.
+     * @param ctx the parse tree
+     * @return the visitor result
+     */
+    visitItemRow?: (ctx: ItemRowContext) => Result;
 }
 

@@ -1,10 +1,14 @@
+/*
+ * Copyright (c) 2019. Ang Hou Fu.
+ * Licensed under the MIT License. See LICENSE file in the project root for license information.
+ */
+
 // Generated from src/parser/grammars/ErgoForm.g4 by ANTLR 4.6-SNAPSHOT
 
 
-import {ParseTreeListener} from 'antlr4ts/tree/ParseTreeListener';
+import {ParseTreeListener} from "antlr4ts/tree/ParseTreeListener";
 
 import {
-    ArrayContext,
     ErgoFormContext,
     ExpressValueContext,
     ItemContext,
@@ -18,7 +22,7 @@ import {
     ObjContext,
     PairContext,
     ValueContext
-} from './ErgoFormParser';
+} from "./ErgoFormParser";
 
 
 /**
@@ -47,28 +51,6 @@ export interface ErgoFormListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	exitItems?: (ctx: ItemsContext) => void;
-
-	/**
-	 * Enter a parse tree produced by `ErgoFormParser.itemRows`.
-	 * @param ctx the parse tree
-	 */
-	enterItemRows?: (ctx: ItemRowsContext) => void;
-	/**
-	 * Exit a parse tree produced by `ErgoFormParser.itemRows`.
-	 * @param ctx the parse tree
-	 */
-	exitItemRows?: (ctx: ItemRowsContext) => void;
-
-	/**
-	 * Enter a parse tree produced by `ErgoFormParser.itemRow`.
-	 * @param ctx the parse tree
-	 */
-	enterItemRow?: (ctx: ItemRowContext) => void;
-	/**
-	 * Exit a parse tree produced by `ErgoFormParser.itemRow`.
-	 * @param ctx the parse tree
-	 */
-	exitItemRow?: (ctx: ItemRowContext) => void;
 
 	/**
 	 * Enter a parse tree produced by `ErgoFormParser.item`.
@@ -113,17 +95,6 @@ export interface ErgoFormListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	exitPair?: (ctx: PairContext) => void;
-
-	/**
-	 * Enter a parse tree produced by `ErgoFormParser.array`.
-	 * @param ctx the parse tree
-	 */
-	enterArray?: (ctx: ArrayContext) => void;
-	/**
-	 * Exit a parse tree produced by `ErgoFormParser.array`.
-	 * @param ctx the parse tree
-	 */
-	exitArray?: (ctx: ArrayContext) => void;
 
 	/**
 	 * Enter a parse tree produced by `ErgoFormParser.key`.
@@ -179,5 +150,27 @@ export interface ErgoFormListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	exitExpressValue?: (ctx: ExpressValueContext) => void;
+
+    /**
+     * Enter a parse tree produced by `ErgoFormParser.itemRows`.
+     * @param ctx the parse tree
+     */
+    enterItemRows?: (ctx: ItemRowsContext) => void;
+    /**
+     * Exit a parse tree produced by `ErgoFormParser.itemRows`.
+     * @param ctx the parse tree
+     */
+    exitItemRows?: (ctx: ItemRowsContext) => void;
+
+    /**
+     * Enter a parse tree produced by `ErgoFormParser.itemRow`.
+     * @param ctx the parse tree
+     */
+    enterItemRow?: (ctx: ItemRowContext) => void;
+    /**
+     * Exit a parse tree produced by `ErgoFormParser.itemRow`.
+     * @param ctx the parse tree
+     */
+    exitItemRow?: (ctx: ItemRowContext) => void;
 }
 

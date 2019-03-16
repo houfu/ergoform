@@ -1,16 +1,22 @@
+/*
+ * Copyright (c) 2019. Ang Hou Fu.
+ * Licensed under the MIT License. See LICENSE file in the project root for license information.
+ */
+
 // Generated from src/classes/ModelItems/SelectBoxExpress/SelectBoxExpress.g4 by ANTLR 4.6-SNAPSHOT
 
 
-import {ParseTreeVisitor} from 'antlr4ts/tree/ParseTreeVisitor';
+import {ParseTreeVisitor} from "antlr4ts/tree/ParseTreeVisitor";
 
 import {
     ItemContext,
+    KeyContext,
     LabelContext,
     PairContext,
     SelectBoxExpressContext,
     SelectItemsContext,
     ValueContext
-} from './SelectBoxExpressParser';
+} from "./SelectBoxExpressParser";
 
 
 /**
@@ -62,5 +68,12 @@ export interface SelectBoxExpressVisitor<Result> extends ParseTreeVisitor<Result
 	 * @return the visitor result
 	 */
 	visitValue?: (ctx: ValueContext) => Result;
+
+    /**
+     * Visit a parse tree produced by `SelectBoxExpressParser.key`.
+     * @param ctx the parse tree
+     * @return the visitor result
+     */
+    visitKey?: (ctx: KeyContext) => Result;
 }
 
